@@ -8,14 +8,12 @@
 </head>
 
 <body class="page__body" style="background-color: rgb(127, 127, 241)">
-  <header class="main-header">
-    <div class="main-header__logo-container">
+  <header class="main-header main-header__background-image">
+    <div class="main-header__container">
       <a class="main-header__logo">
         <img class="main-header__logo-image" src="./img/logo-small.svg" width="74" height="23"
           alt="Логотип мобильной версии.">
       </a>
-    </div>
-    <div class="main-header__nav-container">
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -41,9 +39,7 @@
     <p class="main-header__slogan">Взгляните на жизнь иначе!</p>
     <img class="main-header__image" src="./img/hand-with-phone.png" width="320" height="286" alt="Рука с телефоном.">
     <div class="main-header__store store">
-      <button class="store__download button" type="button">
-        <a class="store__link" href="#">Скачать приложение</a>
-      </button>
+      <a class="store__download button" href="#">Скачать приложение</a>
       <div class="store__container">
         <ul class="store__list">
           <li class="store__item">
@@ -129,6 +125,7 @@
     </section>
     <section class="tariff-plan">
       <div class="tariff-plan__container slider">
+        <h2 class="visually-hidden">Тарифные планы</h2>
         <table class="tariff-plan__grid slider__content">
           <tr class="tariff-plan__description">
             <th class="tariff-plan__title">База<span class="tariff-plan__price">1,99 USD</span></th>
@@ -160,7 +157,7 @@
       </div>
     </section>
     <section class="contacts">
-      <h2 clas="visually-hidden">Контакты</h2>
+      <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts__container">
         <header class="contacts__header">Остались вопросы?Свяжитесь с нами!</header>
         <ul class="contacts__list">
