@@ -9,31 +9,35 @@
 
 <body class="page__body" style="background-color: rgb(127, 127, 241)">
   <header class="main-header">
-    <a class="main-header__logo">
-      <img class="main-header__logo-image" src="./img/logo-small.svg" width="74" height="23"
-        alt="Логотип мобильной версии.">
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="main-nav__container">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a>Главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">Фотографии</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">Конкурс</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">html academy</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <div class="main-header__logo-container">
+      <a class="main-header__logo">
+        <img class="main-header__logo-image" src="./img/logo-small.svg" width="74" height="23"
+          alt="Логотип мобильной версии.">
+      </a>
+    </div>
+    <div class="main-header__nav-container">
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="main-nav__container">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a>Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Фотографии</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">Конкурс</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#">html academy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <p class="main-header__slogan">Взгляните на жизнь иначе!</p>
     <img class="main-header__image" src="./img/hand-with-phone.png" width="320" height="286" alt="Рука с телефоном.">
     <div class="main-header__store store">
@@ -84,10 +88,10 @@
               новых</p>
           </li>
         </ul>
-        <div class="advantages__image-container">
-          <img class="advantages__image" src="./img/phone-screen-hello.png" width="157" height="320"
-            alt="Телефон со скриншотом Всем Привет!">
-        </div>
+      </div>
+      <div class="advantages__image-container">
+        <img class="advantages__image" src="./img/phone-screen-hello.png" width="157" height="320"
+          alt="Телефон со скриншотом Всем Привет!">
       </div>
     </section>
     <section class="reviews">
@@ -127,9 +131,10 @@
       <div class="tariff-plan__container slider">
         <table class="tariff-plan__grid slider__content">
           <tr class="tariff-plan__description">
-            <th class="tariff-plan__title">База<span class="price">1,99 USD</span></th>
-            <th class="tariff-plan__title tariff-plan__title-hit">Стандарт<span class="price">3,99 USD</span></th>
-            <th class="tariff-plan__title">Анлим<span class="price">9,99 USD</span></th>
+            <th class="tariff-plan__title">База<span class="tariff-plan__price">1,99 USD</span></th>
+            <th class="tariff-plan__title tariff-plan__title-hit">Стандарт<span class="tariff-plan__price">3,99
+                USD</span></th>
+            <th class="tariff-plan__title">Анлим<span class="tariff-plan__price">9,99 USD</span></th>
           </tr>
           <tr class="tariff-plan__advantage">
             <td class="tariff-plan__advantage-title tariff-plan__advantage-title--yes">Розовый фильтр</td>
@@ -190,11 +195,11 @@
           <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Ютубе</a>
         </li>
       </ul>
-      <div class="main-footer__copyright copyright">
-        <b class="copyright__text">Разработано</b>
-        <a class="copyright__link copyright__link--academy" href="https://htmlacademy.ru/intensive/adaptive">HTML
-          Academy</a>
-      </div>
+    </div>
+    <div class="main-footer__copyright copyright">
+      <b class="copyright__text">Разработано</b>
+      <a class="copyright__link copyright__link--academy" href="https://htmlacademy.ru/intensive/adaptive">HTML
+        Academy</a>
     </div>
   </footer>
 </body>
