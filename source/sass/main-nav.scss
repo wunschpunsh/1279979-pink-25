@@ -1,0 +1,22 @@
+.main-nav {
+  padding: 20px;
+  background-color: #0000004b;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__item {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.main-nav__link {
+  color: #ffffff;
+  text-decoration: none;
+}

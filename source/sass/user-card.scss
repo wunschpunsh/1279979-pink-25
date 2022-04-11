@@ -1,0 +1,43 @@
+.user-card--hit {
+  padding: 0;
+}
+
+.user-card__container {
+  margin: 0 20px 20px 20px;
+  padding: 26px 10px 26px 17px;
+  background-color: #f2f2f2;
+}
+
+.user-card__photo {
+  margin: 0 20px;
+}
+
+.user-card__photo--hit {
+  margin: 0;
+}
+
+.user-card__author {
+  margin: 0;
+  margin-bottom: 14px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #283645;
+}
+
+.user-card__time {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #283645;
+}
+
+.user-card__description {
+  margin: 0;
+  margin-bottom: 23px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #283645;
+}

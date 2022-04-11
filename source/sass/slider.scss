@@ -1,0 +1,28 @@
+.slider__toggles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.slider-toggles__toggle {
+  padding: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #283645;
+  opacity: 0.3;
+  cursor: pointer;
+  border: 3px solid #ffffff;
+  box-sizing: content-box;
+}
+
+.slider-toggles__toggle:not(:last-child) {
+  margin-right: 19px;
+}
+
+.slider-toggles__toggle--current {
+  background-color: #ffffff;
+  border: 3px solid #283645;
+  opacity: 1;
+}

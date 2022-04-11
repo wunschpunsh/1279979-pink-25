@@ -1,0 +1,39 @@
+.reviews__image-container {
+  overflow: hidden;
+}
+
+.reviews__image {
+  display: block;
+  margin: auto;
+  transform: translateY(43px);
+}
+
+.reviews__container {
+  padding: 50px 20px 60px 20px;
+  background-color: #ffffff;
+  background-origin: border-box;
+}
+
+.reviews__item {
+  margin: 0;
+  margin-bottom: 44px;
+}
+
+.reviews__author-name {
+  margin-bottom: 31px;
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+}
+
+.reviews__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+}

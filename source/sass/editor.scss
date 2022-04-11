@@ -1,0 +1,40 @@
+.editor__button-container {
+  padding: 0 57px;
+  margin-bottom: 39px;
+}
+
+.editor__button {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+
+}
+
+.editor__button:not(:last-child) {
+  margin-right: 35px;
+}
+
+.editor__slider-container {
+  position: relative;
+}
+
+.editor__slider-range {
+  width: 240px;
+  height: 2px;
+  background-color: #283645;
+  margin: 0 auto;
+}
+
+.editor__slider-range-toggle {
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  position: absolute;
+  transform: translate(200px, -5px);
+  cursor: pointer;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 2px solid #d22856;
+  border-radius: 50%;
+}
