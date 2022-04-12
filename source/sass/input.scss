@@ -1,0 +1,27 @@
+.input:not(:last-child) {
+  margin-bottom: 29px;
+}
+
+.input__title {
+  margin-left: 21px;
+  margin-bottom: 17px;
+}
+
+.input__title--decore {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #d22856;
+}
+
+.input__control {
+  box-sizing: border-box;
+  padding: 23px 0 23px 20px;
+  border: 2px solid #e5e5e5;
+  border-radius: 1px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #283645;
+}
