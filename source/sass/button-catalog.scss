@@ -1,3 +1,18 @@
+.button-catalog {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+
+.button-catalog--hit {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}
 
 .button-catalog__like {
   padding: 0;
@@ -11,5 +26,16 @@
   font-size: 12px;
   line-height: 24px;
   text-transform: uppercase;
-  color: #d22856;
+  color: $red;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.button-catalog__like-text--hit {
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    margin-right: 16px;
+  }
 }

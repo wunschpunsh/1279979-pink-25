@@ -5,6 +5,11 @@
 .input__title {
   margin-left: 21px;
   margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    margin-right: 20px;
+  }
 }
 
 .input__title--decore {
@@ -12,16 +17,20 @@
   font-size: 14px;
   line-height: 1.4;
   text-transform: uppercase;
-  color: #d22856;
+  color: $red;
 }
 
 .input__control {
   box-sizing: border-box;
   padding: 23px 0 23px 20px;
-  border: 2px solid #e5e5e5;
+  border: 2px solid $lightgrey;
   border-radius: 1px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.4;
-  color: #283645;
+  color: $lightblue;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }

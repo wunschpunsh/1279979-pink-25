@@ -1,12 +1,27 @@
 .main-footer {
-  padding: 40px 0 40px;
-  background-color: #ffffff;
+  padding: 40px 70px 40px;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    padding: 36px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 70px 130px;
+  }
 }
 
 .main-footer__logo {
   display: block;
   margin: 0 auto;
   margin-bottom: 38px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .social__list {
@@ -19,5 +34,5 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  color: #283645;
+  color: $lightblue;
 }

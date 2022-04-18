@@ -7,14 +7,22 @@
   background-color: transparent;
   cursor: pointer;
   border-radius: 30px;
+
+  @media (min-width: $tablet-width) {
+    width: 260px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 183px;
+  }
 }
 
 .button-secondary--post {
-  color: #d22856;
-  border: 3px solid #d22856;
+  color: $red;
+  border: 3px solid $red;
 }
 
 .button-secondary--cancel {
   opacity: 0.1;
-  border: 3px solid #283645;
+  border: 3px solid $lightblue;
 }

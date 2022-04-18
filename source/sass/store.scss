@@ -1,6 +1,15 @@
 .store__list {
   padding: 0;
   margin: 32px 0 28px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 58px;
+  }
 }
 
 .store__item {
@@ -8,11 +17,19 @@
 }
 
 .store__download {
-  color: #ffffff;
-  border: 3px solid #ffffff;
+  color: $white;
+  border: 3px solid $white;
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+  }
 }
 
 .store__description {
@@ -23,5 +40,11 @@
   line-height: 24px;
   align-items: center;
   text-align: center;
-  color: #ffffff;
+  color: $white;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    font-size: 18px;
+    text-align: start;
+  }
 }

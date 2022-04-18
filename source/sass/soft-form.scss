@@ -1,5 +1,24 @@
+.soft-form {
+  @media (min-width: $tablet-width) {
+    order: 2;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 50%;
+  }
+}
+
 .soft-form__container {
   padding: 42px 22px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 51px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin-left: 74px;
+  }
 }
 
 .soft-form__title {
