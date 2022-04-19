@@ -99,4 +99,8 @@
 .tariff-plan__toggles {
   margin-top: 44px;
   margin-bottom: 46px;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }

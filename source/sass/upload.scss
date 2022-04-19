@@ -72,9 +72,21 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 24px;
+    width: 260px;
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
+    width: 183px;
+  }
+}
+
+.upload__cancel {
+  @media (min-width: $tablet-width) {
+    width: 260px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 183px;
   }
 }

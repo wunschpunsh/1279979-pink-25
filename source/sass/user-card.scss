@@ -66,19 +66,9 @@
 
 .user-card__photo--hit {
   margin: 0;
-  width: $photo-mobile-width-hit;
-  height: $photo-mobile-height-hit;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-
-  @media (min-width: $tablet-width) {
-    width: $photo-tablet-width-hit;
-    height: $photo-tablet-height-hit;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: $photo-desktop-width-hit;
-    height: $photo-desktop-height-hit;
-  }
 }
 
 .user-card__author {
