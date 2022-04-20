@@ -1,23 +1,58 @@
 .main-header {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: $black;
+  color: $white;
 }
 
 .main-header__background-image {
   background-image: url("../../img/small-background.jpg");
-  background-color: #000000;
+  background-color: $black;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.main-header__image {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__content {
+  @media (min-width: $tablet-width) {
+    padding: 102px 20px 119px;
+    width: 50%;
+    // // background-image: url("../img/hand-with-phone-medium.png");
+    // background-repeat: no-repeat;
+    // background-position: -17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 114px 130px 130px;
+    width: 310px;
+    // background-image: url("../img/hand-with-phone-large.png");
+  }
+}
+
 .main-header__slogan {
-  margin-top: 29px;
-  margin-bottom: 34px;
+  margin: 0;
+  padding: 29px 20px 320px;
   font-weight: 300;
   font-size: 24px;
   line-height: 29px;
-  align-items: center;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-bottom: 39px;
+    padding: 0;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 51px;
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 
 .main-header__slogan-form {
@@ -27,7 +62,15 @@
   font-size: 24px;
   line-height: 33px;
   text-align: center;
-  color: #ffffff;
+  color: $white;
+
+  @media (min-width: $tablet-width) {
+    padding: 81px 20px 74px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 74px 226px 104px;
+  }
 }
 
 .main-header__catalog-slogan {
@@ -37,10 +80,23 @@
   font-size: 24px;
   line-height: 33px;
   text-align: center;
-  color: #ffffff;
+  color: $white;
+
+  @media (min-width: $tablet-width) {
+    padding: 81px 151px 143px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 74px 422px 104px;
+  }
 }
 
 .main-header__store {
   padding: 28px 20px 38px 20px;
-  background-color: #1d2631;
+  background-color: $darkblue;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    background-color: transparent;
+  }
 }

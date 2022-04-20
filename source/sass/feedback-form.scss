@@ -1,6 +1,20 @@
+.feedback-form {
+  @media (min-width: $tablet-width) {
+    order: 5;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
 .feedback-form__container {
   padding: 42px 22px 52px;
-  background-color: #ffffff;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 70px;
+  }
 }
 
 .feedback-form__title {
@@ -9,8 +23,14 @@
   text-align: center;
 }
 
+.feedback-form__text-container {
+  @media (min-width: $tablet-width) {
+    padding: 28px 60px 53px;
+  }
+}
+
 .feedback-form__text {
-  width: 276px;
+  width: 100%;
   height: 197px;
   box-sizing: border-box;
   padding: 22px 25px 0 20px;
@@ -18,7 +38,7 @@
   font-size: 18px;
   line-height: 1.3;
   color: #283645;
-  border: 2px solid #e5e5e5;
+  border: 2px solid $lightgrey;
   border-radius: 1px;
   overflow: hidden;
   resize: none;

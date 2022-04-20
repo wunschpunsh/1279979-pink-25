@@ -1,6 +1,27 @@
+.modal-fail {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 460px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 780px;
+  }
+}
+
 .modal-fail__container {
-  padding: 41px 22px 52px;
-  background-color: #ffffff;
+  padding: 41px 22px 50px;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    box-sizing: border-box;
+    padding: 49px 55px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 49px 215px 68px;
+  }
 }
 
 .modal-fail__title {
@@ -15,7 +36,6 @@
 
 .modal-fail__description {
   margin: 0;
-  margin-bottom: 48px;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -23,6 +43,20 @@
   color: #283645;
 }
 
+.modal-fail__accept-container {
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    box-sizing: border-box;
+    padding: 0 82px 54px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 52px 242px;
+    background-color: $grey;
+  }
+}
+
 .modal-fail__accept {
-  margin: 0;
+  margin: 0 auto;
 }

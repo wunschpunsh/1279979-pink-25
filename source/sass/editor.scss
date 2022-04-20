@@ -1,6 +1,27 @@
-.editor__button-container {
+.editor__buttons-container {
+  display: flex;
+  justify-content: space-between;
   padding: 0 57px;
   margin-bottom: 39px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 140px;
+  }
+}
+
+.editor__button-container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
 }
 
 .editor__button {
@@ -11,10 +32,6 @@
 
 }
 
-.editor__button:not(:last-child) {
-  margin-right: 35px;
-}
-
 .editor__slider-container {
   position: relative;
 }
@@ -22,8 +39,30 @@
 .editor__slider-range {
   width: 240px;
   height: 2px;
-  background-color: #283645;
+  background-color: $lightblue;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 202px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 288px;
+  }
+}
+
+.editor__slider-range--disabled {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.editor__slider-range-last--disabled {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .editor__slider-range-toggle {
@@ -34,7 +73,11 @@
   transform: translate(200px, -5px);
   cursor: pointer;
   box-sizing: border-box;
-  background: #ffffff;
-  border: 2px solid #d22856;
+  background: $white;
+  border: 2px solid $red;
   border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    transform: translate(69px, -5px);
+  }
 }

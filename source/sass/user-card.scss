@@ -1,19 +1,74 @@
+.user-card {
+  margin: 0 10px 20px;
+}
+
 .user-card--hit {
   padding: 0;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
+
+.catalog__list {
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }
 
 .user-card__container {
+  padding: 26px 10px 26px 17px;
+  background-color: $grey;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding: 30px;
+  }
+}
+
+.user-card__container--hit {
   margin: 0 20px 20px 20px;
   padding: 26px 10px 26px 17px;
-  background-color: #f2f2f2;
+  background-color: $grey;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 130px;
+    padding: 30px;
+  }
 }
 
 .user-card__photo {
-  margin: 0 20px;
+  width: $photo-mobile-width;
+  height: $photo-mobile-height;
+  object-fit: cover;
+
+  @media (min-width: $tablet-width) {
+    width: $photo-tablet-width;
+    height: $photo-tablet-height;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $photo-desktop-width;
+    height: $photo-desktop-height;
+  }
 }
 
 .user-card__photo--hit {
   margin: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .user-card__author {
@@ -22,7 +77,7 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 24px;
-  color: #283645;
+  color: $lightblue;
 }
 
 .user-card__time {
@@ -30,7 +85,7 @@
   font-size: 12px;
   line-height: 24px;
   text-transform: uppercase;
-  color: #283645;
+  color: $lightblue;
 }
 
 .user-card__description {
@@ -39,5 +94,11 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  color: #283645;
+  color: $lightblue;
+}
+
+.user-card__description--hit {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }

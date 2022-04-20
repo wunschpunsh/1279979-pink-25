@@ -1,7 +1,30 @@
+.modal-success {
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 460px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 780px;
+  }
+}
+
+
 .modal-success__container {
   padding-top: 44px;
   padding-bottom: 41px;
-  background-color: #ffffff;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    box-sizing: border-box;
+    padding: 49px 41px 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    box-sizing: border-box;
+    padding: 49px 192px 44px;
+  }
 }
 
 .modal-success__title {
@@ -11,7 +34,7 @@
   font-size: 18px;
   line-height: 24px;
   text-align: center;
-  color: #000000;
+  color: $black;
 }
 
 .modal-success__description {
@@ -20,9 +43,22 @@
   font-size: 14px;
   line-height: 24px;
   text-align: center;
-  color: #283645;
+  color: $lightblue;
 }
 
 .modal-success__close-container {
   padding: 52px 22px;
+
+  @media (min-width: $tablet-width) {
+    box-sizing: border-box;
+    padding: 52px 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 52px 162px;
+  }
+}
+
+.modal-success__close {
+  margin: 0 auto;
 }

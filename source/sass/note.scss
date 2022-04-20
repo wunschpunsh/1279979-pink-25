@@ -1,0 +1,49 @@
+.note {
+  display: none;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding: 102px 20px 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 115px 166px 120px;
+  }
+}
+
+.note__container {
+  @media (min-width: $tablet-width) {
+    width: 50%;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    // width: 100%;
+  }
+}
+
+.note__title {
+  margin: 0;
+  margin-bottom: 37px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: $black;
+}
+
+.note__description {
+  margin: 0;
+  margin-bottom: 47px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #283645;
+}
+
+.note__info {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: $red;
+}

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -48,17 +49,17 @@
           хватает ваших?</p>
       </div>
       <div class="catalog__container">
-        <ul class="catalog__list">
-          <li class="catalog__item user-card user-card--hit">
-            <img class="user-card__photo user-card__photo--hit" src="./img/photo/bridge-small.jpg" width="320"
-              height="137" alt="Панорама моста.">
-            <div class="user-card__container">
+        <div class="catalog__hit-container">
+          <div class="catalog__hit user-card user-card--hit">
+            <img class="user-card__photo user-card__photo--hit" src="./img/photo/bridge.jpg" width="1200" height="506"
+              alt="Панорама моста.">
+            <div class="user-card__container user-card__container--hit">
               <p class="user-card__author">Анна&nbsp;<span class="user-card__time">(5 минут назад)</span></p>
-              <p class="user-card__description">Прыгать или нет? Напишите в
+              <p class="user-card__description user-card__description--hit">Прыгать или нет? Напишите в
                 комментарии свой совет и
                 смотрите прямую трансляцию в
                 перископе, задавайте свои вопросы!</p>
-              <div class="user-card__like button-catalog">
+              <div class="user-card__like button-catalog button-catalog--hit">
                 <button class="button-catalog__like" type="button">
                   <span class="visually-hidden">Лайк!</span>
                   <svg class="button-catalog__like-icon" width="13" height="12" viewbox="0 0 13 12" fill="none"
@@ -68,16 +69,18 @@
                       fill="#D22856" />
                   </svg>
                 </button>
-                <span class="button-catalog__like-text">Нравится: 150</span>
+                <span class="button-catalog__like-text button-catalog__like-text--hit">Нравится: 215</span>
               </div>
             </div>
-          </li>
+          </div>
+        </div>
+        <ul class="catalog__list">
           <li class="catalog__item user-card">
-            <img class="user-card__photo" src="./img/photo/car-small.jpg" width="280" height="180"
+            <img class="user-card__photo" src="./img/photo/car.jpg" width="300" height="400"
               alt="Фотография автомобиля.">
             <div class="user-card__container">
               <p class="user-card__author">Левон&nbsp;<span class="user-card__time">(5 часов назад)</span></p>
-              <p class="user-card__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <p class="user-card__description">Вчера он на луну летал, сегодня в<br>руки к нам попал.</p>
               <div class="user-card__like button-catalog">
                 <button class="button-catalog__like" type="button">
                   <span class="visually-hidden">Лайк!</span>
@@ -88,12 +91,12 @@
                       fill="#D22856" />
                   </svg>
                 </button>
-                <span class="button-catalog__like-text">Нравится: 150</span>
+                <span class="button-catalog__like-text">Нравится: 356</span>
               </div>
             </div>
           </li>
           <li class="catalog__item user-card">
-            <img class="user-card__photo" src="./img/photo/drums-small.jpg" width="280" height="180" alt="Барабаны.">
+            <img class="user-card__photo" src="./img/photo/drums.jpg" width="300" height="400" alt="Барабаны.">
             <div class="user-card__container">
               <p class="user-card__author">Антон&nbsp;<span class="user-card__time">(12 часов назад)</span></p>
               <p class="user-card__description">Соседи будут рады!</p>
@@ -107,16 +110,16 @@
                       fill="#D22856" />
                   </svg>
                 </button>
-                <span class="button-catalog__like-text">Нравится: 150</span>
+                <span class="button-catalog__like-text">Нравится: 666</span>
               </div>
             </div>
           </li>
           <li class="catalog__item user-card">
-            <img class="user-card__photo" src="./img/photo/roof-small.jpg" width="280" height="180"
+            <img class="user-card__photo" src="./img/photo/roof.jpg" width="300" height="400"
               alt="Вид на стеклянную крышу.">
             <div class="user-card__container">
               <p class="user-card__author">Борис&nbsp;<span class="user-card__time">(20 часов назад)</span></p>
-              <p class="user-card__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <p class="user-card__description">Здесь могла быть ваша цитата о<br>высоком и вечном.</p>
               <div class="user-card__like button-catalog">
                 <button class="button-catalog__like" type="button">
                   <span class="visually-hidden">Лайк!</span>
@@ -127,13 +130,12 @@
                       fill="#D22856" />
                   </svg>
                 </button>
-                <span class="button-catalog__like-text">Нравится: 150</span>
+                <span class="button-catalog__like-text">Нравится: 215</span>
               </div>
             </div>
           </li>
           <li class="catalog__item user-card">
-            <img class="user-card__photo" src="./img/photo/market-small.jpg" width="280" height="180"
-              alt="Кубанский рынок.">
+            <img class="user-card__photo" src="./img/photo/market.jpg" width="300" height="400" alt="Кубанский рынок.">
             <div class="user-card__container">
               <p class="user-card__author">Сергей&nbsp;<span class="user-card__time">(25 часов назад)</span></p>
               <p class="user-card__description">Самая кубанская в мире!</p>
@@ -147,13 +149,12 @@
                       fill="#D22856" />
                   </svg>
                 </button>
-                <span class="button-catalog__like-text">Нравится: 150</span>
+                <span class="button-catalog__like-text">Нравится: 4</span>
               </div>
             </div>
           </li>
           <li class="catalog__item user-card">
-            <img class="user-card__photo" src="./img/photo/mount-small.jpg" width="280" height="180"
-              alt="Ноги на фоне гор.">
+            <img class="user-card__photo" src="./img/photo/mount.jpg" width="300" height="400" alt="Ноги на фоне гор.">
             <div class="user-card__container">
               <p class="user-card__author">Максим&nbsp;<span class="user-card__time">(40 часов назад)</span></p>
               <p class="user-card__description">Где снег-то?</p>
@@ -172,7 +173,7 @@
             </div>
           </li>
           <li class="catalog__item user-card">
-            <img class="user-card__photo" src="./img/photo/airplane-small.jpg" width="280" height="180"
+            <img class="user-card__photo" src="./img/photo/airplane.jpg" width="300" height="400"
               alt="Крыло самолета на закате.">
             <div class="user-card__container">
               <p class="user-card__author">Надежда&nbsp;<span class="user-card__time">(45 часов назад)</span>
@@ -201,55 +202,77 @@
     </section>
     <section class="upload">
       <div class="upload__container">
-        <img class="upload__image" src="./img/photo/snow-road-small.jpg" width="280" height="374"
+        <img class="upload__image" src="./img/photo/snow-road.jpg" width="300" height="400"
           alt="Заснеженная дорога в лесу.">
-        <div class="upload__editor-container editor">
-          <div class="editor__button-container">
-            <button class="editor__button editor__button--active">
-              <span class="visually-hidden">Изменить размер</span>
-              <svg class="editor__button-icon" width="44" height="44" viewbox="0 0 44 44" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M32 28h4V12a3.9998 3.9998 0 0 0-4-4H16v4h16v16Zm-20 4V0H8v8H0v4h8v20a3.9998 3.9998 0 0 0 4 4h20v8h4v-8h8v-4H12Z"
-                  fill="#D22856" />
-              </svg>
-            </button>
-            <button class="editor__button">
-              <span class="visually-hidden">Изменить цвет</span>
-              <svg class="editor__button-icon" width="48" height="43" viewbox="0 0 48 43" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <g opacity=".3" fill="#283645">
-                  <path
-                    d="M33.12 17.88 15.24 0l-2.83 2.83 4.76 4.76L6.88 17.88a3 3 0 0 0 0 4.24l11 11a3 3 0 0 0 4.24 0l11-11a3 3 0 0 0 0-4.24ZM10.41 20 20 10.42 29.59 20H10.41ZM38 23s-4 4.33-4 7a3.9996 3.9996 0 0 0 1.1716 2.8284 3.9996 3.9996 0 0 0 5.6568 0A3.9996 3.9996 0 0 0 42 30c0-2.67-4-7-4-7ZM48 40H0v3h48v-3Z" />
-                </g>
-              </svg>
-            </button>
-            <button class="editor__button">
-              <span class="visually-hidden">Изменить контрастность</span>
-              <svg class="editor__button-icon" width="32" height="32" viewbox="0 0 32 32" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <g opacity=".3" fill="#283645">
-                  <path
-                    d="M16 4a12.0002 12.0002 0 0 1 11.0866 7.4078 11.9998 11.9998 0 0 1-2.6013 13.0775 11.9998 11.9998 0 0 1-13.0775 2.6013A12.0005 12.0005 0 0 1 4 16 12 12 0 0 1 16 4Zm0-4a16 16 0 1 0 0 32 16 16 0 0 0 0-32Z" />
-                  <path d="M16 24.29a8.5199 8.5199 0 0 0 0-17" />
-                </g>
-              </svg>
-            </button>
-          </div>
-          <div class="editor__slider-container">
-            <div class="editor__slider-range">
-              <button class="editor__slider-range-toggle">
-                <span class="visually-hidden">Ползунок для редактора</span>
-              </button>
+        <div class="upload__all-editor">
+          <div class="upload__editor-container editor">
+            <div class="editor__buttons-container">
+              <div class="editor__button-container">
+                <button class="editor__button editor__button--active">
+                  <span class="visually-hidden">Изменить размер</span>
+                  <svg class="editor__button-icon" width="44" height="44" viewbox="0 0 44 44" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M32 28h4V12a3.9998 3.9998 0 0 0-4-4H16v4h16v16Zm-20 4V0H8v8H0v4h8v20a3.9998 3.9998 0 0 0 4 4h20v8h4v-8h8v-4H12Z"
+                      fill="#D22856" />
+                  </svg>
+                </button>
+                <div class="editor__slider-range editor__slider-range--disabled">
+                  <button class="editor__slider-range-toggle">
+                    <span class="visually-hidden">Ползунок для редактора</span>
+                  </button>
+                </div>
+              </div>
+              <div class="editor__button-container">
+                <button class="editor__button">
+                  <span class="visually-hidden">Изменить цвет</span>
+                  <svg class="editor__button-icon" width="48" height="43" viewbox="0 0 48 43" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g opacity=".3" fill="#283645">
+                      <path
+                        d="M33.12 17.88 15.24 0l-2.83 2.83 4.76 4.76L6.88 17.88a3 3 0 0 0 0 4.24l11 11a3 3 0 0 0 4.24 0l11-11a3 3 0 0 0 0-4.24ZM10.41 20 20 10.42 29.59 20H10.41ZM38 23s-4 4.33-4 7a3.9996 3.9996 0 0 0 1.1716 2.8284 3.9996 3.9996 0 0 0 5.6568 0A3.9996 3.9996 0 0 0 42 30c0-2.67-4-7-4-7ZM48 40H0v3h48v-3Z" />
+                    </g>
+                  </svg>
+                </button>
+                <div class="editor__slider-range editor__slider-range--disabled">
+                  <button class="editor__slider-range-toggle">
+                    <span class="visually-hidden">Ползунок для редактора</span>
+                  </button>
+                </div>
+              </div>
+              <div class="editor__button-container">
+                <button class="editor__button">
+                  <span class="visually-hidden">Изменить контрастность</span>
+                  <svg class="editor__button-icon" width="32" height="32" viewbox="0 0 32 32" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g opacity=".3" fill="#283645">
+                      <path
+                        d="M16 4a12.0002 12.0002 0 0 1 11.0866 7.4078 11.9998 11.9998 0 0 1-2.6013 13.0775 11.9998 11.9998 0 0 1-13.0775 2.6013A12.0005 12.0005 0 0 1 4 16 12 12 0 0 1 16 4Zm0-4a16 16 0 1 0 0 32 16 16 0 0 0 0-32Z" />
+                      <path d="M16 24.29a8.5199 8.5199 0 0 0 0-17" />
+                    </g>
+                  </svg>
+                </button>
+                <div class="editor__slider-range editor__slider-range--disabled">
+                  <button class="editor__slider-range-toggle">
+                    <span class="visually-hidden">Ползунок для редактора</span>
+                  </button>
+                </div>
+              </div>
             </div>
+            <div class="editor__slider-container">
+              <div class="editor__slider-range editor__slider-range-last--disabled">
+                <button class="editor__slider-range-toggle">
+                  <span class="visually-hidden">Ползунок для редактора</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="upload__buttons-container">
+            <button class="upload__post button-secondary button-secondary--post">Запостить</button>
+            <button class="upload__cancel button-secondary button-secondary--cancel">Отмена</button>
           </div>
         </div>
       </div>
-      <div class="upload__buttons-container">
-        <button class="upload__post button-secondary button-secondary--post">Запостить</button>
-        <button class="upload__cancel button-secondary button-secondary--cancel">Отмена</button>
-      </div>
-
     </section>
   </main>
   <footer class="main-footer">

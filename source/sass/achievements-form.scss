@@ -1,5 +1,19 @@
+.achievements-form {
+  @media (min-width: $tablet-width) {
+    order: 4;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+  }
+}
+
 .achievements-form__container {
   padding: 42px 22px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 51px;
+  }
 }
 
 .achievements-form__title {

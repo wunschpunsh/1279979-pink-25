@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -115,18 +116,21 @@
           </div>
         </div>
         <div class="contacts-form">
-          <h3 class="visually-hidden">Ваши контакты</h3>
           <div class="contacts-form__container">
-            <label class="contacts-form__field input" for="contacts-form-phone"><span
-                class="input__title input__title--decore">Номер телефона:</span>
-              <input class="input__control" type="text" name="contacts-form-phone" id="contacts-form-phone"
-                placeholder="Номер, пожалуйста">
-            </label>
-            <label class="contacts-form__field input" for="contacts-form-mail"><span
-                class="input__title input__title--decore">Адрес почты:</span>
-              <input class="input__control" type="email" name="contacts-form-mail" id="contacts-form-mail"
-                placeholder="Введите почту *">
-            </label>
+            <h3 class="contacts-form__title input__title--decore contacts-form__title--disabled">Контактная информация
+            </h3>
+            <div class="contacts-form__field-container">
+              <label class="contacts-form__field input" for="contacts-form-phone"><span
+                  class="input__title input__title--decore">Номер телефона:</span>
+                <input class="input__control" type="text" name="contacts-form-phone" id="contacts-form-phone"
+                  placeholder="Номер, пожалуйста">
+              </label>
+              <label class="contacts-form__field input" for="contacts-form-mail"><span
+                  class="input__title input__title--decore">Адрес почты:</span>
+                <input class="input__control" type="email" name="contacts-form-mail" id="contacts-form-mail"
+                  placeholder="Введите почту *">
+              </label>
+            </div>
           </div>
         </div>
         <div class="soft-form">
@@ -160,14 +164,20 @@
         <div class="feedback-form">
           <div class="feedback-form__container">
             <h3 class="feedback-form__title input__title--decore">Опишите свои эмоции</h3>
-            <textarea class="feedback-form__text" id="emotions"
-              name="emotions">Можно прям в красках, не стесняясь в выражениях</textarea>
+            <div class="feedback-form__text-container">
+              <textarea class="feedback-form__text" id="emotions"
+                name="emotions">Можно прям в красках, не стесняясь в выражениях</textarea>
+            </div>
           </div>
         </div>
         <div class="main-form__footer">
           <button class="main-form__send button-primary" type="submit">Отправить форму</button>
-          <p class="main-form__required-text"><span class="main-form__required-text--decore">*</span> — обязательные
-            поля</p>
+          <p class="main-form__required-text">
+            <span class="main-form__required-text--decore">*</span>
+            <span class="main-form__required-text">— обязательные</span>
+            <span class="main-form__required-text-disabled">&nbsp;для заполнения</span>
+            поля
+          </p>
         </div>
       </form>
     </section>
@@ -199,6 +209,8 @@
       <h2 class="modal-fail__title">Что-то пошло не так!</h2>
       <p class="modal-fail__description">Проверьте поля, выделенные красным,
         скорее всего вы забыли их заполнить</p>
+    </div>
+    <div class="modal-fail__accept-container">
       <button class="modal-fail__accept button-primary" type="button">Ок</button>
     </div>
   </div>

@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -11,13 +12,15 @@
   <header class="main-header main-header__background-image">
     <div class="main-header__container">
       <nav class="main-nav">
-        <a class="main-nav__logo">
-          <img class="main-nav__logo-image" src="./img/logo-small.svg" width="74" height="23"
-            alt="Логотип мобильной версии.">
-        </a>
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+        <div class="main-nav__header-container">
+          <a class="main-nav__logo">
+            <img class="main-nav__logo-image" src="./img/logo-small.svg" width="74" height="23"
+              alt="Логотип мобильной версии.">
+          </a>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
         <div class="main-nav__container">
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -38,7 +41,7 @@
     </div>
     <div class="main-header__content">
       <p class="main-header__slogan">Взгляните на жизнь иначе!</p>
-      <img class="main-header__image" src="./img/hand-with-phone.png" width="320" height="286" alt="Рука с телефоном.">
+      <!-- <img class="main-header__image" src="./img/hand-with-phone.png" width="320" height="286" alt="Рука с телефоном."> -->
       <div class="main-header__store store">
         <button class="store__download button-secondary" type="button">Скачать приложение</button>
         <div class="store__container">
@@ -54,7 +57,7 @@
             </li>
           </ul>
         </div>
-        <p class="store__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        <p class="store__description">Доступно для iPhone, iPad, Android,<br>Windows Phone, OS X, Windows 8</p>
       </div>
     </div>
   </header>
@@ -65,7 +68,7 @@
         <header class="advantages__header">
           <h2 class="visually-hidden">Преимущества</h2>
           <p class="advantages__intro">Устали от серости мегаполиса?</p>
-          <p class="advantages__slogan">Нам есть, что вам предложить!</p>
+          <p class="advantages__slogan">Нам есть, что вам<br>предложить!</p>
         </header>
       </div>
       <div class="advantages__list-container">
@@ -89,21 +92,26 @@
         </ul>
       </div>
     </section>
-    <section class="reviews">
-      <div class="reviews__image-container">
-        <img class="reviews__image" src="./img/phone-screen-hello.png" width="157" height="320"
-          alt="Телефон со скриншотом Всем Привет!">
+    <section class="note">
+      <div class="note__container">
+        <h2 class="note__title">Эффект на 24 часа!</h2>
+        <p class="note__description">Британские ученые провели исследования и доказали,
+          что положительный эффект от использования приложения длится целые сутки!</p>
+        <a class="note__info" href="#">Узнать больше об исследовании</a>
       </div>
+    </section>
+    <section class="reviews">
       <div class="reviews__container slider">
         <h2 class="visually-hidden">Отзывы о нас</h2>
         <div class="reviews__list slider__list">
           <blockquote class="reviews__item slider__item">
             <div class="reviews__author-info">
               <cite class="reviews__author-name">Николай Петров</cite>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на
-                привычные
-                серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              <span class="reviews__author-resume">25 лет, водитель трамвая</span>
             </div>
+            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на
+              привычные
+              серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
           </blockquote>
           <blockquote class="reviews__item slider__item visually-hidden">
             <div class="reviews__author-info">
@@ -135,28 +143,53 @@
         <h2 class="visually-hidden">Тарифные планы</h2>
         <table class="tariff-plan__grid slider__content">
           <tr class="tariff-plan__description">
-            <th class="tariff-plan__title tariff-plan__title--decore">База<span class="tariff-plan__price">1,99
+            <th class="tariff-plan__title tariff-plan__title--decore tariff-plan__title--disabled"><span
+                class="tariff-plan__price">
+              </span></th>
+            <th class="tariff-plan__title tariff-plan__title--hit tariff-plan__title--decore">База<span
+                class="tariff-plan__price">1,99
                 USD</span></th>
-            <th class="tariff-plan__title tariff-plan__title--hit tariff-plan__title--decore">Стандарт<span
-                class="tariff-plan__price">3,99
+            <th class="tariff-plan__title tariff-plan__title--decore">Стандарт<span class="tariff-plan__price">3,99
                 USD</span></th>
             <th class="tariff-plan__title tariff-plan__title--decore">Анлим<span class="tariff-plan__price">9,99
                 USD</span></th>
           </tr>
           <tr class="tariff-plan__advantage">
-            <td class="tariff-plan__advantage-title tariff-plan__advantage-title--yes">Розовый фильтр</td>
-            <td class="tariff-plan__advantage-title tariff-plan__advantage-title--yes">Розовый фильтр</td>
-            <td class="tariff-plan__advantage-title tariff-plan__advantage-title--yes">Розовый фильтр</td>
+            <td class="tariff-plan__advantage-title tariff-plan__advantage-title--yes">
+              Розовый фильтр</td>
+            <td
+              class="tariff-plan__advantage-title tariff-plan__advantage-title--yes tariff-plan__advantage-title--disabled">
+              Розовый фильтр</td>
+            <td
+              class="tariff-plan__advantage-title tariff-plan__advantage-title--yes tariff-plan__advantage-title--disabled">
+              Розовый фильтр</td>
+            <td
+              class="tariff-plan__advantage-title tariff-plan__advantage-title--yes tariff-plan__advantage-title--disabled">
+              Розовый фильтр</td>
           </tr>
           <tr class="tariff-plan__advantage">
             <td class="tariff-plan__advantage-title tariff-plan__advantage-title--no">Смайлики</td>
-            <td class="tariff-plan__advantage-title tariff-plan__advantage-title--yes">Смайлики</td>
-            <td class="tariff-plan__advantage-title tariff-plan__advantage-title--yes">Смайлики</td>
+            <td
+              class="tariff-plan__advantage-title tariff-plan__advantage-title--yes tariff-plan__advantage-title--disabled">
+              Смайлики</td>
+            <td
+              class="tariff-plan__advantage-title tariff-plan__advantage-title--yes tariff-plan__advantage-title--disabled">
+              Смайлики</td>
+            <td
+              class="tariff-plan__advantage-title tariff-plan__advantage-title--no tariff-plan__advantage-title--disabled">
+              Смайлики</td>
           </tr>
           <tr class="tariff-plan__advantage">
             <td class="tariff-plan__advantage-title tariff-plan__advantage-title-no">Комментарии</td>
-            <td class="tariff-plan__advantage-title tariff-plan__advantage-title-no">Комментарии</td>
-            <td class="tariff-plan__advantage-title tariff-plan__advantage-title-yes">Комментарии</td>
+            <td
+              class="tariff-plan__advantage-title tariff-plan__advantage-title-no tariff-plan__advantage-title--disabled">
+              Комментарии</td>
+            <td
+              class="tariff-plan__advantage-title tariff-plan__advantage-title-yes tariff-plan__advantage-title--disabled">
+              Комментарии</td>
+            <td
+              class="tariff-plan__advantage-title tariff-plan__advantage-title-yes tariff-plan__advantage-title--disabled">
+              Комментарии</td>
           </tr>
         </table>
         <p class="tariff-plan__toggles slider__toggles">
@@ -185,7 +218,7 @@
             <span class="contacts__adress contacts__item--decore">ул. Большая<br>Конюшенная, 19/8</span>
           </li>
         </ul>
-        <img class="contacts__map" src="./img/map.jpg" width="320" height="200" alt="Карта с местоположением офиса.">
+        <!-- <img class="contacts__map" src="./img/map.jpg" width="320" height="200" alt="Карта с местоположением офиса."> -->
       </div>
     </section>
   </main>

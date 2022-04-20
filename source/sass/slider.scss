@@ -3,6 +3,10 @@
   justify-content: center;
   align-items: center;
   margin: 0;
+
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
 }
 
 .slider-toggles__toggle {
@@ -10,10 +14,10 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #283645;
+  background-color: $lightblue;
   opacity: 0.3;
   cursor: pointer;
-  border: 3px solid #ffffff;
+  border: 3px solid $white;
   box-sizing: content-box;
 }
 
@@ -22,7 +26,7 @@
 }
 
 .slider-toggles__toggle--current {
-  background-color: #ffffff;
-  border: 3px solid #283645;
+  background-color: $white;
+  border: 3px solid $lightblue;
   opacity: 1;
 }
