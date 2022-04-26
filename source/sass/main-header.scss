@@ -4,16 +4,11 @@
 }
 
 .main-header__background-image {
-  background-image: url("../../img/small-background.jpg");
+  background-image: url("../../img/background-header.jpg");
   background-color: $black;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.main-header__image {
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
+  background-position: center;
 }
 
 .main-header__content {
@@ -39,6 +34,14 @@
   font-size: 24px;
   line-height: 29px;
   text-align: center;
+
+  br {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin: 0;

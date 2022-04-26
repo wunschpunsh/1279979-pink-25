@@ -1,6 +1,6 @@
 .button-secondary {
   width: 280px;
-  padding: 18px 36px;
+  padding: 16px 36px;
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
@@ -8,13 +8,9 @@
   cursor: pointer;
   border-radius: 30px;
 
-//   @media (min-width: $tablet-width) {
-//     width: 260px;
-//   }
-
-//   @media (min-width: $desktop-width) {
-//     width: 183px;
-//   }
+  @media (min-width: $tablet-width) {
+    width: 300px;
+  }
 }
 
 .button-secondary--post {
