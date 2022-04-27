@@ -1,6 +1,10 @@
+
 .store__list {
-  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 32px 0 28px 0;
+  padding: 0 38px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
@@ -16,12 +20,45 @@
   list-style: none;
 }
 
+.store__link {
+  display: block;
+}
+
+.store__link--apple {
+  background-image: url("../img/apple-logo.svg");
+  width: 47px;
+  height: 56px;
+}
+
+.store__link--android {
+  background-image: url("../img/android-logo.svg");
+  width: 43px;
+  height: 47px;
+}
+
+.store__link--microsoft {
+  background-image: url("../img/microsoft-logo.svg");
+  width: 44px;
+  height: 41px;
+}
+
 .store__download {
   color: $white;
   border: 3px solid $white;
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
+
+  &:hover {
+    background-color: $white;
+    color: $red;
+    box-shadow: 0 5px 7px rgba(1, 1, 1, 0.75);
+  }
+
+  &:active {
+    background-color: $white;
+    color: #d228564d;
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 51px;

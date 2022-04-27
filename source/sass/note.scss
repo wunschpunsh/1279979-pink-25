@@ -9,6 +9,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 115px 166px 120px;
+    background-color: $grey;
   }
 }
 
@@ -30,15 +31,31 @@
   font-size: 30px;
   line-height: 36px;
   color: $black;
+
+  @media (min-width: $desktop-width) {
+    br {
+      display: none;
+    }
+    line-height: 30px;
+  }
 }
 
 .note__description {
   margin: 0;
-  margin-bottom: 47px;
+  margin-bottom: 24px;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   color: #283645;
+
+  @media (min-width: $desktop-width) {
+    br {
+      display: none;
+    }
+    margin-bottom: 47px;
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 .note__info {
@@ -46,4 +63,9 @@
   font-size: 14px;
   line-height: 24px;
   color: $red;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }

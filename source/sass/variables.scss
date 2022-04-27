@@ -17,7 +17,7 @@ $mobile-width-only: 659px;
 // table
 
 $column-mobile-width: 276px;
-$column-tablet-width: 152px;
+$column-tablet-width: 155px;
 $column-desktop-width: 233px;
 
 // Catalog-gallery: hit
@@ -37,3 +37,18 @@ $photo-tablet-width: 300px;
 $photo-tablet-height: 300px;
 $photo-desktop-width: 300px;
 $photo-desktop-height: 400px;
+
+// Styling user interaction
+
+%active-social-link {
+  &:active {
+    opacity: 0.1;
+    border: 3px solid $lightblue;
+  }
+}
+
+%hover-social-link {
+  &:hover {
+    border: 3px solid $lightblue;
+  }
+}

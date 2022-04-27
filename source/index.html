@@ -11,7 +11,7 @@
 <body class="page__body">
   <header class="main-header main-header__background-image">
     <div class="main-header__container">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--nojs">
         <div class="main-nav__header-container">
           <a class="main-nav__logo">
             <img class="main-nav__logo-image" src="./img/logo-small.svg" width="74" height="23"
@@ -20,12 +20,11 @@
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
-          <!-- пасхалка -->
         </div>
         <div class="main-nav__container">
           <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a>Главная</a>
+            <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__link ">Главная</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="catalog.html">Фотографии</a>
@@ -41,20 +40,25 @@
       </nav>
     </div>
     <div class="main-header__content">
-      <p class="main-header__slogan">Взгляните на жизнь иначе!</p>
-      <!-- <img class="main-header__image" src="./img/hand-with-phone.png" width="320" height="286" alt="Рука с телефоном."> -->
+      <p class="main-header__slogan">Взгляните<br> на жизнь<br> иначе!</p>
+      <!-- <img class="main-header__image" src="./img/hand-with-phone.png" width="555" height="645" alt="Рука с телефоном."> -->
       <div class="main-header__store store">
         <button class="store__download button-secondary" type="button">Скачать приложение</button>
         <div class="store__container">
           <ul class="store__list">
             <li class="store__item">
-              <a class="store__link store__link--apple" href="#">Эпл Сторе</a>
+              <a class="store__link store__link--apple" href="#">
+                <span class="visually-hidden">Эпл Сторе</span>
+              </a>
             </li>
             <li class="store__item">
-              <a class="store__link store__link--android" href="#">Гугл Плей</a>
+              <a class="store__link store__link--android" href="#">
+                <span class="visually-hidden">Гугл Плей</span>
+              </a>
             </li>
             <li class="store__item">
-              <a class="store__link store__link--microsoft" href="#">Майкрософт Сторе</a>
+              <a class="store__link store__link--microsoft" href="#">
+                <span class="visually-hidden">Майкрософт Сторе</span></a>
             </li>
           </ul>
         </div>
@@ -76,17 +80,19 @@
         <ul class="advantages__list">
           <li class="advantages__item">
             <h3 class="advantages__title">Поднимает настроение</h3>
-            <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
+            <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию<br> буквально
+              в
               несколько кликов!</p>
           </li>
           <li class="advantages__item">
-            <h3 class="advantages__title">Меняет мир вокруг</h3>
-            <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
+            <h3 class="advantages__title">Меняет мир<br> вокруг</h3>
+            <p class="advantages__description">Сделайте снимок и украсьте его<br> смайликом или текстовой подписью,<br>
+              чтобы
               усилить эффект</p>
           </li>
           <li class="advantages__item">
-            <h3 class="advantages__title">Заводит новых друзей</h3>
-            <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и
+            <h3 class="advantages__title">Заводит<br> новых друзей</h3>
+            <p class="advantages__description">Ставьте лайки, комментируйте,<br> делитесь фотографиями с друзьями и
               заводите
               новых</p>
           </li>
@@ -95,9 +101,9 @@
     </section>
     <section class="note">
       <div class="note__container">
-        <h2 class="note__title">Эффект на 24 часа!</h2>
-        <p class="note__description">Британские ученые провели исследования и доказали,
-          что положительный эффект от использования приложения длится целые сутки!</p>
+        <h2 class="note__title">Эффект<br> на 24 часа!</h2>
+        <p class="note__description">Британские ученые провели исследования<br> и доказали,
+          что положительный эффект<br> от использования приложения длится целые сутки!</p>
         <a class="note__info" href="#">Узнать больше об исследовании</a>
       </div>
     </section>
@@ -147,16 +153,17 @@
             <th class="tariff-plan__title tariff-plan__title--decore tariff-plan__title--disabled"><span
                 class="tariff-plan__price">
               </span></th>
-            <th class="tariff-plan__title tariff-plan__title--hit tariff-plan__title--decore">База<span
-                class="tariff-plan__price">1,99
+            <th class="tariff-plan__title tariff-plan__title--decore">База<span class="tariff-plan__price">1,99
                 USD</span></th>
-            <th class="tariff-plan__title tariff-plan__title--decore">Стандарт<span class="tariff-plan__price">3,99
+            <th class="tariff-plan__title tariff-plan__title--decore tariff-plan__title--hit">Стандарт<span
+                class="tariff-plan__price">3,99
                 USD</span></th>
             <th class="tariff-plan__title tariff-plan__title--decore">Анлим<span class="tariff-plan__price">9,99
                 USD</span></th>
           </tr>
           <tr class="tariff-plan__advantage">
-            <td class="tariff-plan__advantage-title tariff-plan__advantage-title--yes">
+            <td
+              class="tariff-plan__advantage-title tariff-plan__advantage-title--yes tariff-plan__advantage-title--disabled-icon">
               Розовый фильтр</td>
             <td
               class="tariff-plan__advantage-title tariff-plan__advantage-title--yes tariff-plan__advantage-title--disabled">
@@ -169,7 +176,9 @@
               Розовый фильтр</td>
           </tr>
           <tr class="tariff-plan__advantage">
-            <td class="tariff-plan__advantage-title tariff-plan__advantage-title--no">Смайлики</td>
+            <td
+              class="tariff-plan__advantage-title tariff-plan__advantage-title--no tariff-plan__advantage-title--disabled-icon">
+              Смайлики</td>
             <td
               class="tariff-plan__advantage-title tariff-plan__advantage-title--yes tariff-plan__advantage-title--disabled">
               Смайлики</td>
@@ -181,15 +190,17 @@
               Смайлики</td>
           </tr>
           <tr class="tariff-plan__advantage">
-            <td class="tariff-plan__advantage-title tariff-plan__advantage-title-no">Комментарии</td>
             <td
-              class="tariff-plan__advantage-title tariff-plan__advantage-title-no tariff-plan__advantage-title--disabled">
+              class="tariff-plan__advantage-title tariff-plan__advantage-title--no tariff-plan__advantage-title--disabled-icon">
               Комментарии</td>
             <td
-              class="tariff-plan__advantage-title tariff-plan__advantage-title-yes tariff-plan__advantage-title--disabled">
+              class="tariff-plan__advantage-title tariff-plan__advantage-title--no tariff-plan__advantage-title--disabled">
               Комментарии</td>
             <td
-              class="tariff-plan__advantage-title tariff-plan__advantage-title-yes tariff-plan__advantage-title--disabled">
+              class="tariff-plan__advantage-title tariff-plan__advantage-title--no tariff-plan__advantage-title--disabled">
+              Комментарии</td>
+            <td
+              class="tariff-plan__advantage-title tariff-plan__advantage-title--yes tariff-plan__advantage-title--disabled">
               Комментарии</td>
           </tr>
         </table>
@@ -206,20 +217,24 @@
       <div class="contacts__container">
         <header class="contacts__intro">Остались вопросы?Свяжитесь с нами!</header>
         <ul class="contacts__list">
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--position-one">
             <b class="contacts__title">Звоните:</b>
-            <a class="contacts__phone contacts__item--decore" href="tel:+78125556666">+7 (812) 555-66-66</a>
+            <a class="contacts__phone contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a>
           </li>
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--position-three">
             <b class="contacts__title">Пишите:</b>
-            <a class="contacts__mail contacts__item--decore" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a class="contacts__mail contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </li>
-          <li class="contacts__item">
+          <li class="contacts__item contacts__item--position-two">
             <b class="contacts__title">Приезжайте в гости:</b>
-            <span class="contacts__adress contacts__item--decore">ул. Большая<br>Конюшенная, 19/8</span>
+            <span class="contacts__adress contacts__link">ул. Большая<br>Конюшенная, 19/8</span>
           </li>
         </ul>
-        <!-- <img class="contacts__map" src="./img/map.jpg" width="320" height="200" alt="Карта с местоположением офиса."> -->
+        <iframe class="contacts__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8224465563626!2d30.31522021617442!3d59.96826866667002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1650919933333!5m2!1sru!2sru"
+          width="1200" height="502" style="border: 0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- <img class="contacts__map" src="./img/map.jpg" width="1200" height="502" alt="Карта с местоположением офиса."> -->
       </div>
     </section>
   </main>
@@ -228,23 +243,36 @@
     <div class="main-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Мы в Вконтакте</span>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Мы в Телеграме</span>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в
-            Ютубе</a>
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Мы в Ютубе</span>
+          </a>
         </li>
       </ul>
     </div>
     <div class="main-footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
-      <a class="copyright__link copyright__link--academy" href="https://htmlacademy.ru/intensive/adaptive">HTML
-        Academy</a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <svg class="copyright__link-academy" width="27" height="34" viewbox="0 0 27 34" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.6426.0157537 13.5 0 0 1.40733V26.0129L13.5 34 27 26.0129V1.40733L13.6426.0157537ZM25.2344 25.0151 13.5 31.9573 1.76561 25.0151V14.9293l11.68509 6.9158.0194 1.2533-8.01659-4.7436-.01056 1.2253 8.04645 4.8084.0194 1.2865-8.04472-4.7576-.01057 1.2253L13.5 26.9511l8.1239-4.8329V16.909l3.6193-2.1495-.0088 10.2556Zm0-11.5632-3.2197 1.88-1.4822.8752-7.0659-4.187-.0106 1.2253 6.0397 3.5726-.0528.0315-.1303.0752-.859.4919-4.987-2.9477-.0106 1.2253 3.9361 2.328-.933.6092-.0211.0122-2.9714-1.7416-.0106 1.2253 1.9469 1.1342-1.9874 1.1868-11.6182-6.8721 11.6376-6.95789 11.7995 6.83359Zm0-1.2253L13.4401 5.31075 1.76561 12.2196V2.9897L13.5 1.76442 25.2344 2.9897v9.2369Z"
+            fill="#D22856" />
+        </svg>
+        <span class="visually-hidden">HTML Academy</span>
+      </a>
     </div>
   </footer>
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

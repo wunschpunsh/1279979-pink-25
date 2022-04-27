@@ -19,14 +19,24 @@
   cursor: pointer;
   border: 3px solid $white;
   box-sizing: content-box;
-}
 
-.slider-toggles__toggle:not(:last-child) {
-  margin-right: 19px;
-}
+  &:not(:last-child) {
+    margin-right: 19px;
+  }
 
-.slider-toggles__toggle--current {
-  background-color: $white;
-  border: 3px solid $lightblue;
-  opacity: 1;
+  &--current {
+    background-color: $white;
+    border: 3px solid $lightblue;
+    opacity: 1;
+  }
+
+  &:not(.slider-toggles__toggle--current):hover {
+    background: $lightblue;
+    opacity: 0.6;
+  }
+
+  &:active {
+    background: $lightblue;
+    opacity: 0.1;
+  }
 }

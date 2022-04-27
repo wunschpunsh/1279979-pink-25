@@ -1,6 +1,13 @@
 .user-card {
   margin: 0 10px 20px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    width: calc(50% - 20px);
+  }
 }
+
 
 .user-card--hit {
   padding: 0;
@@ -23,6 +30,9 @@
 }
 
 .user-card__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
   padding: 26px 10px 26px 17px;
   background-color: $grey;
 
@@ -74,10 +84,12 @@
 .user-card__author {
   margin: 0;
   margin-bottom: 14px;
+  margin-right: auto;
   font-weight: 700;
   font-size: 14px;
   line-height: 24px;
   color: $lightblue;
+
 }
 
 .user-card__time {
@@ -90,11 +102,16 @@
 
 .user-card__description {
   margin: 0;
+  width: 100%;
   margin-bottom: 23px;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   color: $lightblue;
+
+  @media (min-width: $tablet-width) {
+    order: 3;
+  }
 }
 
 .user-card__description--hit {
