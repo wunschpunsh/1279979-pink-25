@@ -17,15 +17,39 @@
   }
 }
 
+.feedback-form__group {
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  @media (min-width: $tablet-width) {
+    border: 2px solid $lightgrey;
+    border-radius: 1px;
+  }
+}
+
 .feedback-form__title {
   margin: 0;
   margin-bottom: 22px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 14px 38px;
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 25px;
+  }
 }
 
 .feedback-form__text-container {
   @media (min-width: $tablet-width) {
-    padding: 28px 60px 53px;
+    padding: 0 60px 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 60px 45px;
   }
 }
 

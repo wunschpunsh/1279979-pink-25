@@ -1,12 +1,100 @@
+.check-input {
+  display: flex;
+  // align-items: center;
+}
+
 .check-input__control {
   margin-right: 22px;
 }
 
 
 .check-input__description {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 22px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.4;
   color: $lightblue;
+  text-align: center;
+}
+
+.check-input__description-soft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 31px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  color: $lightblue;
+  text-transform: none;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 22px;
+  }
+}
+
+.check-input__mark {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  background-color: $white;
+  border: 2px solid $lightgrey;
+  border-radius: 1px;
+
+  &:hover {
+    border: 2px solid $lightblue;
+  }
+
+  &:active {
+    border: 2px solid $red;
+  }
+
+  .check-input__control:checked + &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/check.svg");
+    width: 22px;
+    height: 16px;
+    top: calc(50% - 8px);
+    right: calc(50% - 11px);
+  }
+}
+
+.check-input__mark-soft {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  background-color: $white;
+  border: 2px solid $lightgrey;
+
+  &:hover {
+    border: 2px solid $lightblue;
+  }
+
+  &:active {
+    border: 2px solid $red;
+  }
+
+  .check-input__control:checked + &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 8px);
+    right: calc(50% - 8px);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $red;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 42px;
+  }
 }

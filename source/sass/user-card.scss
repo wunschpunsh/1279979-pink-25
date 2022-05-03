@@ -6,18 +6,48 @@
   @media (min-width: $tablet-width) {
     width: calc(50% - 20px);
   }
-}
 
+  @media (min-width: $desktop-width) {
+    width: calc(33% - 17px);
+  }
 
-.user-card--hit {
-  padding: 0;
-  margin: 0;
+  &--hit {
+    padding: 0;
+    margin: 0;
+    position: relative;
 
-  @media (min-width: $tablet-width) {
-    width: 100%;
-    margin-bottom: 50px;
+    &::after {
+      content: "Панорама дня";
+      position: absolute;
+      width: 140px;
+      height: 36px;
+      top: 0;
+      right: 20px;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 12px;
+      line-height: 36px;
+      font-weight: 700;
+      color: $white;
+      background-color: $red;
+
+      @media (min-width: $tablet-width) {
+        top: 57px;
+      }
+
+      @media (min-width: $desktop-width) {
+        top: 54px;
+        right: 130px;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 100%;
+      margin-bottom: 50px;
+    }
   }
 }
+
 
 .catalog__list {
   padding-left: 10px;
@@ -40,23 +70,28 @@
     margin-bottom: 0;
     padding: 30px;
   }
-}
-
-.user-card__container--hit {
-  margin: 0 20px 20px 20px;
-  padding: 26px 10px 26px 17px;
-  background-color: $grey;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 0;
-    padding: 30px;
-  }
 
   @media (min-width: $desktop-width) {
-    margin: 0 130px;
-    padding: 30px;
+    padding: 30px 27px;
+  }
+
+  &--hit {
+    margin: 0 20px 20px 20px;
+    padding: 25px 10px 25px 17px;
+    background-color: $grey;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+      padding: 30px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0 130px;
+      padding: 30px;
+    }
   }
 }
+
 
 .user-card__photo {
   width: $photo-mobile-width;
@@ -72,30 +107,41 @@
     width: $photo-desktop-width;
     height: $photo-desktop-height;
   }
-}
 
-.user-card__photo--hit {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  &--hit {
+    margin: 0;
+    width: 100%;
+    height: 137px;
+
+    @media (min-width: $tablet-width) {
+      height: 509px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 100%;
+    }
+  }
 }
 
 .user-card__author {
   margin: 0;
   margin-bottom: 14px;
-  margin-right: auto;
   font-weight: 700;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 21px;
   color: $lightblue;
 
+  @media (min-width: $tablet-width) {
+    &--hit {
+      flex-basis: 50%;
+    }
+  }
 }
 
 .user-card__time {
   font-weight: 300;
   font-size: 12px;
-  line-height: 24px;
+  line-height: 21px;
   text-transform: uppercase;
   color: $lightblue;
 }
@@ -106,16 +152,28 @@
   margin-bottom: 23px;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 21px;
   color: $lightblue;
 
   @media (min-width: $tablet-width) {
     order: 3;
   }
+
+  &--hit {
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      br {
+        display: none;
+      }
+    }
+  }
 }
 
-.user-card__description--hit {
+.user-card__like {
   @media (min-width: $tablet-width) {
-    margin-bottom: 0;
+    order: 3;
   }
 }

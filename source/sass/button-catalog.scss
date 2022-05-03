@@ -9,8 +9,10 @@
 .button-catalog--hit {
   @media (min-width: $tablet-width) {
     display: flex;
+    flex-basis: 50%;
     flex-direction: row-reverse;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    order: 1;
     align-items: center;
   }
 }
@@ -31,6 +33,7 @@
 
   @media (min-width: $tablet-width) {
     margin: 0;
+    margin-right: 137px;
   }
 }
 
