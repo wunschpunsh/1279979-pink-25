@@ -8,17 +8,40 @@
   cursor: pointer;
   border-radius: 30px;
 
+  &--post {
+    color: $red;
+    border: 3px solid $red;
+
+    &:hover {
+      background-color: $red;
+      border: 3px solid transparent;
+      color: $white;
+    }
+
+    &:active {
+      background-color: $red;
+      border: 3px solid transparent;
+      color: #ffffff4d;
+    }
+  }
+
+  &--cancel {
+    border: 3px solid #2836451a;
+    color: #2836451a;
+
+    &:hover {
+      color: #2836454d;
+      border: 3px solid #2836454d;
+    }
+
+    &:active {
+      background-color: #2836454d;
+      border: 3px solid transparent;
+      color: #ffffff4d;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     width: 300px;
   }
-}
-
-.button-secondary--post {
-  color: $red;
-  border: 3px solid $red;
-}
-
-.button-secondary--cancel {
-  opacity: 0.1;
-  border: 3px solid $lightblue;
 }

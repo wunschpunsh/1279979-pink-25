@@ -11,14 +11,16 @@
 <body class="page__body">
   <header class="main-header main-header__background-image">
     <div class="main-header__container">
-      <nav class="main-nav">
-        <a class="main-nav__logo">
-          <img class="main-nav__logo-image" src="./img/logo-small.svg" width="74" height="23"
-            alt="Логотип мобильной версии.">
-        </a>
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <nav class="main-nav main-nav--nojs">
+        <div class="main-nav__header-container">
+          <a class="main-nav__logo">
+            <img class="main-nav__logo-image" src="./img/logo-small.svg" width="74" height="23"
+              alt="Логотип мобильной версии.">
+          </a>
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+        </div>
         <div class="main-nav__container">
           <ul class="main-nav__list">
             <li class="main-nav__item">
@@ -47,22 +49,27 @@
       <h2 class="visually-hidden">Форма для участия в конкурсе</h2>
       <div class="main-form__description-container">
         <h3 class="visually-hidden">Ваше имя</h3>
-        <p class="main-form__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль
-          на
-          вашу
-          бонусную карту!</p>
+        <p class="main-form__description">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на
+          вашу бонусную карту!
+          <span>Пожалуйста, заполните форму ниже:</span>
+        </p>
       </div>
       <form class="main-form__youself" action="https://echo.htmlacademy.ru" method="post">
         <div class="name-form">
           <div class="name-form__container">
-            <label class="name-form__field input"><span class="input__title input__title--decore">Фамилия:</span>
-              <input class="input__control" type="text" name="name-form-lastname" placeholder="Укажите фамилию *"
-                required>
-            </label>
-            <label class="name-form__field input"><span class="input__title input__title--decore">Имя:</span>
-              <input class="input__control" type="text" name="name-form-firstname" placeholder="Введите ваше имя *"
-                required>
-            </label>
+            <div class="name-form__field-container">
+              <label class="name-form__field input">
+                <span class="input__title input__title--decore input__title--name-position">Фамилия:</span>
+                <input class="input__control" type="text" name="name-form-lastname" placeholder="Укажите фамилию *"
+                  required>
+              </label>
+            </div>
+            <div class="name-form__field-container">
+              <label class="name-form__field input"><span class="input__title input__title--decore">Имя:</span>
+                <input class="input__control " type="text" name="name-form-firstname" placeholder="Введите ваше имя *"
+                  required>
+              </label>
+            </div>
             <label class="name-form__field input"><span class="input__title input__title--decore">Отчество:</span>
               <input class="input__control" type="text" name="name-form-middlename" id="name-form-middlename"
                 placeholder="Ну и отчество тоже">
@@ -71,43 +78,50 @@
         </div>
         <div class="achievements-form">
           <div class="achievements-form__container">
-            <h3 class="achievements-form__title input__title--decore">Ваши безбашенные<br>
-              достижения в путешествии</h3>
             <fieldset class="achievements-form__group">
+              <legend class="achievements-form__title input__title--decore">Ваши безбашенные<br>
+                достижения в путешествии</legend>
               <ul class="achievements-form__list">
-                <li class="achievements-form__item">
+                <li class="achievements-form__item achievements-form__item--position-selfie">
                   <label class="achievements-form__border check-input" for="selfie">
-                    <input class="check-input__control mark" type="checkbox" id="selfie" name="selfie" checked>
+                    <input class="visually-hidden check-input__control" type="checkbox" id="selfie" name="selfie"
+                      checked>
+                    <span class="check-input__mark"></span>
                     <span class="check-input__description">Сделал селфи с акулой</span>
                   </label>
                 </li>
-                <li class="achievements-form__item">
+                <li class="achievements-form__item achievements-form__item--position-burn">
                   <label class="achievements-form__border check-input" for="burn">
-                    <input class="check-input__control mark" type="checkbox" id="burn" name="burn" checked>
+                    <input class="visually-hidden check-input__control" type="checkbox" id="burn" name="burn" checked>
+                    <span class="check-input__mark"></span>
                     <span class="check-input__description">Обгорел на пляже</span>
                   </label>
                 </li>
-                <li class="achievements-form__item">
+                <li class="achievements-form__item achievements-form__item--position-see">
                   <label class="achievements-form__border check-input" for="see">
-                    <input class="check-input__control mark" type="checkbox" id="see" name="see">
+                    <input class="visually-hidden check-input__control" type="checkbox" id="see" name="see">
+                    <span class="check-input__mark"></span>
                     <span class="check-input__description">Видел Чака Норриса</span>
                   </label>
                 </li>
-                <li class="achievements-form__item">
+                <li class="achievements-form__item achievements-form__item--position-buy">
                   <label class="achievements-form__border check-input" for="buy">
-                    <input class="check-input__control mark" type="checkbox" id="buy" name="buy">
+                    <input class="visually-hidden check-input__control" type="checkbox" id="buy" name="buy">
+                    <span class="check-input__mark"></span>
                     <span class="check-input__description">Накупил сувениров</span>
                   </label>
                 </li>
-                <li class="achievements-form__item">
+                <li class="achievements-form__item achievements-form__item--position-keep">
                   <label class="achievements-form__border check-input" for="keep">
-                    <input class="check-input__control mark" type="checkbox" id="keep" name="keep" checked>
+                    <input class="visually-hidden check-input__control" type="checkbox" id="keep" name="keep" checked>
+                    <span class="check-input__mark"></span>
                     <span class="check-input__description">Удержал башню</span>
                   </label>
                 </li>
-                <li class="achievements-form__item">
+                <li class="achievements-form__item achievements-form__item--position-crush">
                   <label class="achievements-form__border check-input" for="crush">
-                    <input class="check-input__control mark" type="checkbox" id="crush" name="crush" checked>
+                    <input class="visually-hidden check-input__control" type="checkbox" id="crush" name="crush" checked>
+                    <span class="check-input__mark"></span>
                     <span class="check-input__description">Разгромил отель</span>
                   </label>
                 </li>
@@ -117,44 +131,51 @@
         </div>
         <div class="contacts-form">
           <div class="contacts-form__container">
-            <h3 class="contacts-form__title input__title--decore contacts-form__title--disabled">Контактная информация
-            </h3>
-            <div class="contacts-form__field-container">
-              <label class="contacts-form__field input" for="contacts-form-phone"><span
-                  class="input__title input__title--decore">Номер телефона:</span>
-                <input class="input__control" type="text" name="contacts-form-phone" id="contacts-form-phone"
-                  placeholder="Номер, пожалуйста">
-              </label>
-              <label class="contacts-form__field input" for="contacts-form-mail"><span
-                  class="input__title input__title--decore">Адрес почты:</span>
-                <input class="input__control" type="email" name="contacts-form-mail" id="contacts-form-mail"
-                  placeholder="Введите почту *">
-              </label>
-            </div>
+            <fieldset class="contacts-form__group">
+              <legend class="contacts-form__title input__title--decore contacts-form__title--disabled">
+                Контактная информация
+              </legend>
+              <div class="contacts-form__field-container">
+                <div class="contacts-form__field-wrapper">
+                  <label class="contacts-form__field input input--position" for="contacts-form-phone">
+                    <span class="input__title input__title--decore input__title--icon-phone">Номер телефона</span>
+                    <input class="input__control input__control--width" type="text" name="contacts-form-phone"
+                      id="contacts-form-phone" placeholder="Номер, пожалуйста">
+                  </label>
+                </div>
+                <label class="contacts-form__field input input--position" for="contacts-form-mail">
+                  <span class="input__title input__title--decore input__title--icon-mail">Адрес почты</span>
+                  <input class="input__control input__control--width" type="email" name="contacts-form-mail"
+                    id="contacts-form-mail" placeholder="Введите почту *">
+                </label>
+              </div>
+            </fieldset>
           </div>
         </div>
         <div class="soft-form">
           <div class="soft-form__container">
-            <h3 class="soft-form__title input__title--decore">С каким приложением
-              путешествовали?</h3>
             <fieldset class="soft-form__group">
+              <legend class="soft-form__title input__title--decore">С каким приложением путешествовали?</legend>
               <ul class="soft-form__list">
                 <li class="soft-form__item">
                   <label class="soft-form__border check-input" for="iOS">
-                    <input class="check-input__control" type="radio" id="iOS" name="iOS" checked>
-                    <span class="check-input__description">Pink для iOS</span>
+                    <input class="visually-hidden check-input__control" type="radio" id="iOS" name="soft" checked>
+                    <span class="check-input__mark-soft"></span>
+                    <span class="check-input__description-soft">Pink для iOS</span>
                   </label>
                 </li>
                 <li class="soft-form__item">
                   <label class="soft-form__border check-input" for="android">
-                    <input class="check-input__control" type="radio" id="android" name="android">
-                    <span class="check-input__description">Pink на Android</span>
+                    <input class="visually-hidden check-input__control" type="radio" id="android" name="soft">
+                    <span class="check-input__mark-soft"></span>
+                    <span class="check-input__description-soft">Pink на Android</span>
                   </label>
                 </li>
                 <li class="soft-form__item">
                   <label class="soft-form__border check-input" for="windows">
-                    <input class="check-input__control" type="radio" id="windows" name="windows">
-                    <span class="check-input__description">Windows Phone</span>
+                    <input class="visually-hidden check-input__control" type="radio" id="windows" name="soft">
+                    <span class="check-input__mark-soft"></span>
+                    <span class="check-input__description-soft">Windows Phone</span>
                   </label>
                 </li>
               </ul>
@@ -163,15 +184,17 @@
         </div>
         <div class="feedback-form">
           <div class="feedback-form__container">
-            <h3 class="feedback-form__title input__title--decore">Опишите свои эмоции</h3>
-            <div class="feedback-form__text-container">
-              <textarea class="feedback-form__text" id="emotions"
-                name="emotions">Можно прям в красках, не стесняясь в выражениях</textarea>
-            </div>
+            <fieldset class="feedback-form__group">
+              <legend class="feedback-form__title input__title--decore">Опишите свои эмоции</legend>
+              <div class="feedback-form__text-container">
+                <textarea class="feedback-form__text" id="emotions"
+                  name="emotions">Можно прям в красках, не стесняясь в выражениях</textarea>
+              </div>
+            </fieldset>
           </div>
         </div>
         <div class="main-form__footer">
-          <button class="main-form__send button-primary" type="submit">Отправить форму</button>
+          <button class="main-form__send button-primary disabled" type="submit">Отправить форму</button>
           <p class="main-form__required-text">
             <span class="main-form__required-text--decore">*</span>
             <span class="main-form__required-text">— обязательные</span>
@@ -187,20 +210,33 @@
     <div class="main-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
+          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Мы в Вконтакте</span>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме</a>
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Мы в Телеграме</span>
+          </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Ютубе</a>
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Мы в Ютубе</span>
+          </a>
         </li>
       </ul>
     </div>
     <div class="main-footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
-      <a class="copyright__link copyright__link--academy" href="https://htmlacademy.ru/intensive/adaptive">HTML
-        Academy</a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <svg class="copyright__link-academy" width="27" height="34" viewbox="0 0 27 34" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M13.6426.0157537 13.5 0 0 1.40733V26.0129L13.5 34 27 26.0129V1.40733L13.6426.0157537ZM25.2344 25.0151 13.5 31.9573 1.76561 25.0151V14.9293l11.68509 6.9158.0194 1.2533-8.01659-4.7436-.01056 1.2253 8.04645 4.8084.0194 1.2865-8.04472-4.7576-.01057 1.2253L13.5 26.9511l8.1239-4.8329V16.909l3.6193-2.1495-.0088 10.2556Zm0-11.5632-3.2197 1.88-1.4822.8752-7.0659-4.187-.0106 1.2253 6.0397 3.5726-.0528.0315-.1303.0752-.859.4919-4.987-2.9477-.0106 1.2253 3.9361 2.328-.933.6092-.0211.0122-2.9714-1.7416-.0106 1.2253 1.9469 1.1342-1.9874 1.1868-11.6182-6.8721 11.6376-6.95789 11.7995 6.83359Zm0-1.2253L13.4401 5.31075 1.76561 12.2196V2.9897L13.5 1.76442 25.2344 2.9897v9.2369Z"
+            fill="#D22856" />
+        </svg>
+        <span class="visually-hidden">HTML Academy</span>
+      </a>
     </div>
   </footer>
 
@@ -227,7 +263,7 @@
       <button class="modal-success__close button-primary" type="button">Закрыть окно</button>
     </div>
   </div>
-
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

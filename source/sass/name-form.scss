@@ -12,6 +12,18 @@
     padding: 0 0 51px;
   }
 
+  @media (min-width: $desktop-width) {
+    margin-top: 25px;
+    margin-right: 38px;
+  }
+}
+
+.name-form__field-container {
+  margin-bottom: 29px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 56px;
+  }
 }
 
 .name-form__field {
@@ -20,6 +32,5 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    align-items: center;
   }
 }

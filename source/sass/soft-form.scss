@@ -9,15 +9,15 @@
 }
 
 .soft-form__container {
-  padding: 42px 22px;
+  padding: 42px 22px 54px;
 
   @media (min-width: $tablet-width) {
     padding: 0 0 51px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0;
-    margin-left: 74px;
+    // padding: 0;
+    margin-left: 39px;
   }
 }
 
@@ -25,16 +25,39 @@
   margin: 0;
   margin-bottom: 40px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 14px 25px;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 12px 22px;
+  }
 }
 
 .soft-form__group {
   margin: 0;
   padding: 0;
   border: none;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 60px 54px;
+    border: 2px solid $lightgrey;
+    border-radius: 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 32px 54px;
+  }
 }
 
 .soft-form__list {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.soft-form__item:not(:last-child) {
+  margin-bottom: 38px;
 }

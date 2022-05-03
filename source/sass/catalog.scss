@@ -6,7 +6,7 @@
   padding: 54px 20px 60px;
 
   @media (min-width: $tablet-width) {
-    padding: 100px 20px 85px;
+    padding: 100px 45px 85px;
   }
 
   @media (min-width: $desktop-width) {
@@ -21,6 +21,14 @@
   line-height: 30px;
   text-align: center;
   color: $lightblue;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 
@@ -56,4 +64,8 @@
   line-height: 30px;
   text-align: center;
   color: $lightblue;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+  }
 }

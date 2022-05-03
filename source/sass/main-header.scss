@@ -68,7 +68,9 @@
   color: $white;
 
   @media (min-width: $tablet-width) {
-    padding: 81px 20px 74px;
+    padding: 61px 20px 65px;
+    font-size: 50px;
+    line-height: 68px;
   }
 
   @media (min-width: $desktop-width) {
@@ -87,6 +89,8 @@
 
   @media (min-width: $tablet-width) {
     padding: 81px 151px 143px;
+    font-size: 50px;
+    line-height: 68px;
   }
 
   @media (min-width: $desktop-width) {

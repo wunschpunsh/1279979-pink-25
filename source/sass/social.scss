@@ -29,25 +29,35 @@
   border-radius: 50%;
   border: 3px solid #2836451a;
 
-  @extend %hover-social-link;
-
+  &:hover {
+    border: 3px solid $lightblue;
+  }
 
   &--vk {
     background-image: url("../img/vk.svg");
 
-    @extend %active-social-link;
+    &:active {
+      opacity: 0.1;
+      border: 3px solid $lightblue;
+    }
   }
 
   &--telegram {
     background-image: url("../img/telegram.svg");
 
-    @extend %active-social-link;
+    &:active {
+      opacity: 0.1;
+      border: 3px solid $lightblue;
+    }
   }
 
   &--youtube {
     background-image: url("../img/youtube.svg");
 
-    @extend %active-social-link;
+    &:active {
+      opacity: 0.1;
+      border: 3px solid $lightblue;
+    }
   }
 }
 

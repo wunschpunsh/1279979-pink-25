@@ -1,36 +1,107 @@
-.input:not(:last-child) {
-  margin-bottom: 29px;
-}
+// .sss {
+//   margin-bottom: 29px;
 
-.input__title {
-  margin-left: 21px;
-  margin-bottom: 17px;
+//   @media (min-width: $tablet-width) {
+//     margin-bottom: 56px;
+//   }
+// }
 
-  @media (min-width: $tablet-width) {
-    margin-left: 0;
-    margin-right: 20px;
+.input {
+  @media (min-width: $desktop-width) {
+    &--position {
+      margin: 0;
+    }
   }
 }
 
-.input__title--decore {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.4;
-  text-transform: uppercase;
-  color: $red;
+.input__title {
+  position: relative;
+  margin-left: 21px;
+  margin-bottom: 17px;
+
+  &--decore {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $red;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-top: 22px;
+    margin-right: 20px;
+
+    &--icon-phone {
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../img/phone-icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 59px;
+        height: 59px;
+        background-color: $lightgrey;
+        top: -81px;
+        right: -20px;
+      }
+
+      @media (min-width: $desktop-width) {
+        right: 0;
+      }
+    }
+
+    &--icon-mail {
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../img/mail-icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 59px;
+        height: 59px;
+        background-color: $lightgrey;
+        top: -81px;
+        right: -20px;
+      }
+
+      // @media (min-width: $desktop-width) {
+      //   right: -22px;
+      // }
+    }
+  }
 }
 
 .input__control {
   box-sizing: border-box;
-  padding: 23px 0 23px 20px;
+  padding: 17px 0 17px 20px;
   border: 2px solid $lightgrey;
   border-radius: 1px;
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.4;
-  color: $lightblue;
+  line-height: 1;
+
+  &::placeholder {
+    color: $lightblue;
+  }
+
+  &:hover {
+    border: 2px solid $lightblue;
+  }
+
+  &:active {
+    border: 2px solid $red;
+  }
 
   @media (min-width: $tablet-width) {
     width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+
+    &--width {
+      width: 371px;
+    }
   }
 }
