@@ -4,11 +4,16 @@
 }
 
 .main-header__background-image {
+  display: block;
   background-image: url("../../img/background-header.jpg");
   background-color: $black;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+
+  @media (min-width: $tablet-width) {
+
+  }
 }
 
 .main-header__content {
