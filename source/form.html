@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -13,11 +17,11 @@
     <div class="main-header__container">
       <nav class="main-nav main-nav--nojs">
         <div class="main-nav__header-container">
-          <a class="main-nav__logo">
+          <a class="main-nav__logo" href="index.html">
             <picture>
-              <source media="(min-width: 1200px)" srcset="./img/logo-large.svg" width="147" height="40">
-              <source media="(min-width: 660px)" srcset="./img/logo-medium.svg" width="145" height="40">
-              <img class="main-nav__logo-image" src="./img/logo-small.svg" width="74" height="23"
+              <source media="(min-width: 1200px)" srcset="./img/logos/logo-large.svg" width="147" height="40">
+              <source media="(min-width: 660px)" srcset="./img/logos/logo-medium.svg" width="145" height="40">
+              <img class="main-nav__logo-image" src="./img/logos/logo-small.svg" width="74" height="23"
                 alt="Логотип мобильной версии.">
             </picture>
           </a>
@@ -210,7 +214,11 @@
     </section>
   </main>
   <footer class="main-footer">
-    <img class="main-footer__logo" src="./img/logo-footer.svg" width="145" height="40" alt="Логотип приложения.">
+    <picture>
+      <source media="(min-width: 1200px)" srcset="./img/logos/logo-footer-large.svg" width="147" height="40">
+      <img class="main-footer__logo" src="./img/logos/logo-footer.svg" width="145" height="40"
+        alt="Логотип приложения.">
+    </picture>
     <div class="main-footer__social social">
       <ul class="social__list">
         <li class="social__item">

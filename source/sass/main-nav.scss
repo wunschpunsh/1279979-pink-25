@@ -6,6 +6,7 @@
 
   &--opened {
     background-color: $lightblue;
+    z-index: 50;
 
     @media (min-width: $tablet-width) {
       width: 660px;

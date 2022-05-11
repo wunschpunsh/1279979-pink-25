@@ -1,3 +1,23 @@
+.slider {
+  @media (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
+.slider__container {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+}
+
 .slider__toggles {
   display: flex;
   justify-content: center;
@@ -6,6 +26,23 @@
 
   @media (min-width: $desktop-width) {
     display: none;
+  }
+}
+
+.slider__button {
+  width: 22px;
+  height: 41px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover path {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
   }
 }
 

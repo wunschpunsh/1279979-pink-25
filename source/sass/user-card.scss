@@ -94,33 +94,7 @@
 
 
 .user-card__photo {
-  width: $photo-mobile-width;
-  height: $photo-mobile-height;
-  object-fit: cover;
-
-  @media (min-width: $tablet-width) {
-    width: $photo-tablet-width;
-    height: $photo-tablet-height;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: $photo-desktop-width;
-    height: $photo-desktop-height;
-  }
-
-  &--hit {
-    margin: 0;
-    width: 100%;
-    height: 137px;
-
-    @media (min-width: $tablet-width) {
-      height: 509px;
-    }
-
-    @media (min-width: $desktop-width) {
-      height: 100%;
-    }
-  }
+  display: block;
 }
 
 .user-card__author {

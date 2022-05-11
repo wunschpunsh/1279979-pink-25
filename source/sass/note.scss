@@ -4,12 +4,27 @@
 
   @media (min-width: $tablet-width) {
     display: block;
-    padding: 102px 20px 29px;
+    padding: 102px 20px 38px;
+    background-image: url("../img/timers/timer-medium.png");
+    background-repeat: no-repeat;
+    background-size: 238px 276px;
+    background-position: 20px 54px;
+  }
+
+  @media (min-width: $tablet-width) and (min-resolution: 2dppx) {
+    background-image: url("../img/timers/timer-medium@2x.png");
   }
 
   @media (min-width: $desktop-width) {
     padding: 115px 166px 120px;
+    background-image: url("../img/timers/timer-large.png");
+    background-size: 298px 345px;
+    background-position: 131px 17px;
     background-color: $grey;
+  }
+
+  @media (min-width: $desktop-width) and (min-resolution: 2dppx) {
+    background-image: url("../img/timers/timer-large@2x.png");
   }
 }
 
@@ -26,10 +41,10 @@
 
 .note__title {
   margin: 0;
-  margin-bottom: 37px;
+  margin-bottom: 24px;
   font-weight: 700;
   font-size: 30px;
-  line-height: 36px;
+  line-height: 1;
   color: $black;
 
   @media (min-width: $desktop-width) {
@@ -45,7 +60,7 @@
   margin-bottom: 24px;
   font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 21px;
   color: #283645;
 
   @media (min-width: $desktop-width) {
@@ -54,7 +69,7 @@
     }
     margin-bottom: 47px;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 25px;
   }
 }
 
