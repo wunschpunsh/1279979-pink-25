@@ -2,18 +2,6 @@
   background-color: $white;
 }
 
-// .contacts__container {
-//   padding-top: 50px;
-
-//   @media (min-width: $tablet-width) {
-//     padding-top: 55px;
-//   }
-
-//   @media (min-width: $desktop-width) {
-//     padding: 74px 160px 528px;
-//   }
-// }
-
 .contacts__intro {
   padding: 50px 49px 0;
   margin-bottom: 45px;
@@ -133,15 +121,35 @@
   height: 200px;
   border: none;
   display: block;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 31px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    clip-path: polygon(100% 0, 50% 100%, 0 0);
+  }
 
   @media (min-width: $tablet-width) {
     width: 660px;
     height: 374px;
+
+    &::before {
+      height: 68px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 1200px;
     height: 502px;
+
+    &::before {
+      height: 103px;
+    }
   }
 }
 

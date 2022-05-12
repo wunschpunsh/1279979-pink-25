@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -13,9 +17,13 @@
     <div class="main-header__container">
       <nav class="main-nav main-nav--nojs">
         <div class="main-nav__header-container">
-          <a class="main-nav__logo">
-            <img class="main-nav__logo-image" src="./img/logo-small.svg" width="74" height="23"
-              alt="Логотип мобильной версии.">
+          <a class="main-nav__logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/logos/logo-large.svg" width="147" height="40">
+              <source media="(min-width: 660px)" srcset="./img/logos/logo-medium.svg" width="145" height="40">
+              <img class="main-nav__logo-image" src="./img/logos/logo-small.svg" width="74" height="23"
+                alt="Логотип мобильной версии.">
+            </picture>
           </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -53,8 +61,14 @@
       <div class="catalog__container">
         <div class="catalog__hit-container">
           <div class="catalog__hit user-card user-card--hit">
-            <img class="user-card__photo user-card__photo--hit" src="./img/photo/bridge.jpg" width="1200" height="506"
-              alt="Панорама моста.">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/photo/bridge-large.jpg 1x, ./img/photo/bridge-large@2x.jpg 2x" width="1200" heigth="506">
+              <source media="(min-width: 660px)"
+                srcset="./img/photo/bridge-medium.jpg 1x, ./img/photo/bridge-medium@2x.jpg 2x" width="660" heigth="509">
+              <img class="user-card__photo user-card__photo--hit" src="./img/photo/bridge-small.jpg" width="320"
+                height="137" srcset="./img/photo/bridge-small@2x.jpg 2x" alt="Панорама моста.">
+            </picture>
             <div class="user-card__container user-card__container--hit">
               <p class="user-card__author user-card__author--hit">Анна&nbsp;<span class="user-card__time">(5 минут
                   назад)</span></p>
@@ -79,8 +93,14 @@
         </div>
         <ul class="catalog__list">
           <li class="catalog__item user-card">
-            <img class="user-card__photo" src="./img/photo/car.jpg" width="300" height="400"
-              alt="Фотография автомобиля.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="./img/photo/car-large.jpg 1x, ./img/photo/car-large@2x.jpg 2x"
+                width="300" heigth="400">
+              <source media="(min-width: 660px)"
+                srcset="./img/photo/car-medium.jpg 1x, ./img/photo/car-medium@2x.jpg 2x" width="300" heigth="300">
+              <img class="user-card__photo" src="./img/photo/car-small.jpg" width="280" height="180"
+                srcset="./img/photo/car-small@2x.jpg 2x" alt="Фотография автомобиля.">
+            </picture>
             <div class="user-card__container">
               <p class="user-card__author">Левон&nbsp;<span class="user-card__time">(5 часов назад)</span></p>
               <p class="user-card__description">Вчера он на луну летал, сегодня в<br>руки к нам попал.</p>
@@ -99,7 +119,14 @@
             </div>
           </li>
           <li class="catalog__item user-card">
-            <img class="user-card__photo" src="./img/photo/drums.jpg" width="300" height="400" alt="Барабаны.">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/photo/drums-large.jpg 1x, ./img/photo/drums-large@2x.jpg 2x" width="300" heigth="400">
+              <source media="(min-width: 660px)"
+                srcset="./img/photo/drums-medium.jpg 1x, ./img/photo/drums-medium@2x.jpg 2x" width="300" heigth="300">
+              <img class="user-card__photo" src="./img/photo/drums-small.jpg" width="280" height="180"
+                srcset="./img/photo/drums-small@2x.jpg 2x" alt="Барабаны.">
+            </picture>
             <div class="user-card__container">
               <p class="user-card__author">Антон&nbsp;<span class="user-card__time">(12 часов назад)</span></p>
               <p class="user-card__description">Соседи будут рады!</p>
@@ -118,8 +145,14 @@
             </div>
           </li>
           <li class="catalog__item user-card">
-            <img class="user-card__photo" src="./img/photo/roof.jpg" width="300" height="400"
-              alt="Вид на стеклянную крышу.">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/photo/roof-large.jpg 1x, ./img/photo/roof-large@2x.jpg 2x" width="300" heigth="400">
+              <source media="(min-width: 660px)"
+                srcset="./img/photo/roof-medium.jpg 1x, ./img/photo/roof-medium@2x.jpg 2x" width="300" heigth="300">
+              <img class="user-card__photo" src="./img/photo/roof-small.jpg" srcset="./img/photo/roof-small@2x.jpg 2x"
+                width="280" height="180" alt="Вид на стеклянную крышу.">
+            </picture>
             <div class="user-card__container">
               <p class="user-card__author">Борис&nbsp;<span class="user-card__time">(20 часов назад)</span></p>
               <p class="user-card__description">Здесь могла быть ваша цитата о<br>высоком и вечном.</p>
@@ -138,7 +171,14 @@
             </div>
           </li>
           <li class="catalog__item user-card">
-            <img class="user-card__photo" src="./img/photo/market.jpg" width="300" height="400" alt="Кубанский рынок.">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/photo/market-large.jpg 1x, ./img/photo/market-large@2x.jpg 2x" width="300" heigth="400">
+              <source media="(min-width: 660px)"
+                srcset="./img/photo/market-medium.jpg 1x, ./img/photo/market-medium@2x.jpg 2x" width="300" heigth="300">
+              <img class="user-card__photo" src="./img/photo/market-small.jpg"
+                srcset="./img/photo/market-small@2x.jpg 2x" width="280" height="180" alt="Кубанский рынок.">
+            </picture>
             <div class="user-card__container">
               <p class="user-card__author">Сергей&nbsp;<span class="user-card__time">(25 часов назад)</span></p>
               <p class="user-card__description">Самая кубанская в мире!</p>
@@ -157,7 +197,14 @@
             </div>
           </li>
           <li class="catalog__item user-card">
-            <img class="user-card__photo" src="./img/photo/mount.jpg" width="300" height="400" alt="Ноги на фоне гор.">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/photo/mount-large.jpg 1x, ./img/photo/mount-large@2x.jpg 2x" width="300" heigth="400">
+              <source media="(min-width: 660px)"
+                srcset="./img/photo/mount-medium.jpg 1x, ./img/photo/mount-medium@2x.jpg 2x" width="300" heigth="300">
+              <img class="user-card__photo" src="./img/photo/mount-small.jpg" srcset="./img/photo/mount-small@2x.jpg 2x"
+                width="280" height="180" alt="Ноги на фоне гор.">
+            </picture>
             <div class="user-card__container">
               <p class="user-card__author">Максим&nbsp;<span class="user-card__time">(40 часов назад)</span></p>
               <p class="user-card__description">Где снег-то?</p>
@@ -176,8 +223,16 @@
             </div>
           </li>
           <li class="catalog__item user-card">
-            <img class="user-card__photo" src="./img/photo/airplane.jpg" width="300" height="400"
-              alt="Крыло самолета на закате.">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="./img/photo/airplane-large.jpg 1x, ./img/photo/airplane-large@2x.jpg 2x" width="300"
+                heigth="400">
+              <source media="(min-width: 660px)"
+                srcset="./img/photo/airplane-medium.jpg 1x, ./img/photo/airplane-medium@2x.jpg 2x" width="300"
+                heigth="300">
+              <img class="user-card__photo" src="./img/photo/airplane-small.jpg"
+                srcset="./img/photo/airplane-small@2x.jpg 2x" width="280" height="180" alt="Крыло самолета на закате.">
+            </picture>
             <div class="user-card__container">
               <p class="user-card__author">Надежда&nbsp;<span class="user-card__time">(45 часов назад)</span>
               </p>
@@ -205,8 +260,13 @@
     </section>
     <section class="upload">
       <div class="upload__container">
-        <img class="upload__image" src="./img/photo/snow-road.jpg" width="300" height="400"
-          alt="Заснеженная дорога в лесу.">
+        <picture>
+          <source media="(min-width: 660px)"
+            srcset="./img/photo/snow-road-medium.jpg 1x, ./img/photo/snow-road-medium@2x.jpg 2x" width="300"
+            heigth="400">
+          <img class="upload__image" src="./img/photo/snow-road-small.jpg"
+            srcset="./img/photo/snow-road-small@2x.jpg 2x" width="280" height="374" alt="Заснеженная дорога в лесу.">
+        </picture>
         <div class="upload__all-editor">
           <div class="upload__editor-container editor">
             <div class="editor__buttons-container">
@@ -279,7 +339,11 @@
     </section>
   </main>
   <footer class="main-footer">
-    <img class="main-footer__logo" src="./img/logo-footer.svg" width="145" height="40" alt="Логотип приложения.">
+    <picture>
+      <source media="(min-width: 1200px)" srcset="./img/logos/logo-footer-large.svg" width="147" height="40">
+      <img class="main-footer__logo" src="./img/logos/logo-footer.svg" width="145" height="40"
+        alt="Логотип приложения.">
+    </picture>
     <div class="main-footer__social social">
       <ul class="social__list">
         <li class="social__item">

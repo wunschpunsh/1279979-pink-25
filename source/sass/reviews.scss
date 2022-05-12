@@ -1,20 +1,23 @@
 .reviews__container {
   padding: 50px 20px 60px 20px;
   background-color: $white;
-  background-origin: border-box;
 
   @media (min-width: $tablet-width) {
-    padding: 109px 20px 0;
+    padding: 100px 20px 0;
   }
 
   @media (min-width: $desktop-width) {
     padding: 193px 130px 41px;
+    background-image: url("../img/quotes.svg");
+    background-repeat: no-repeat;
+    background-size: 79px 63px;
+    background-position: top 72px center;
   }
 }
 
-.reviews__list  {
+.reviews__list {
   @media (min-width: $desktop-width) {
-    margin: 0 126px;
+    padding: 0 126px;
   }
 }
 
