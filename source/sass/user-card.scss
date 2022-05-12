@@ -129,13 +129,10 @@
   line-height: 21px;
   color: $lightblue;
 
-  @media (min-width: $tablet-width) {
-    order: 3;
-  }
-
   &--hit {
     @media (min-width: $tablet-width) {
       margin-bottom: 0;
+      order: 3;
     }
 
     @media (min-width: $desktop-width) {
