@@ -23,7 +23,7 @@
   display: flex;
   justify-content: space-between;
   padding: 21px 20px;
-  box-shadow: 0 1px 0 #000000;
+  // box-shadow: 0 1px 0 #000000;
 
   @media (min-width: $tablet-width) {
     padding: 27px 20px 42px;
@@ -52,6 +52,50 @@
 
   &:hover path {
     fill: $red;
+  }
+
+  &:active path {
+    fill: $white;
+    opacity: 0.3;
+  }
+
+  &--visible-phone {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &--visible-tablet {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &--visible-desktop {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 145px;
+    height: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 147px;
   }
 }
 

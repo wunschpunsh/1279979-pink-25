@@ -149,11 +149,18 @@
 .advantages__item-image {
   margin-bottom: -45px;
 
+  @media (min-width: $tablet-width) {
+    width: 268px;
+    height: 547px;
+  }
+
   @media (min-width: $desktop-width) {
     display: block;
     margin: 0 auto;
     margin-bottom: -81px;
     position: relative;
+    width: 186px;
+    height: 382px;
   }
 }
 

@@ -37,8 +37,9 @@
   border: none;
   cursor: pointer;
 
-  &:hover path {
-    opacity: 0.6;
+  &:hover {
+    fill: #27354499;
+    opacity: 1;
   }
 
   &:active {

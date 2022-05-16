@@ -1,6 +1,7 @@
 .reviews__container {
   padding: 50px 20px 60px 20px;
   background-color: $white;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     padding: 100px 20px 0;
@@ -8,10 +9,19 @@
 
   @media (min-width: $desktop-width) {
     padding: 193px 130px 41px;
-    background-image: url("../img/quotes.svg");
-    background-repeat: no-repeat;
-    background-size: 79px 63px;
-    background-position: top 72px center;
+  }
+}
+
+.reviews__icon {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    width: 79px;
+    height: 63px;
+    display: block;
+    position: absolute;
+    top: 72px;
+    left: 50%;
   }
 }
 
