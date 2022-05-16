@@ -51,12 +51,6 @@
                 d="M50.9203 15.9169c-.593.0013-1.1805-.1124-1.7288-.3347-.5483-.2222-1.0467-.5485-1.4665-.9603-.4198-.4119-.7529-.901-.9802-1.4396-.2272-.5385-.3442-1.1158-.3442-1.6988-.0027 1.1767-.48 2.3043-1.3273 3.1355-.8474.8311-1.9955 1.2979-3.1924 1.2979 1.1979.0026 2.3459.4716 3.193 1.3043.847.8327 1.324 1.9613 1.3267 3.139 0-1.1785.4762-2.3086 1.3238-3.1419.8476-.8333 1.9972-1.3014 3.1959-1.3014ZM38.0744 19.3826c-.7326 0-1.4351-.286-1.9531-.7953-.518-.5092-.809-1.1998-.809-1.92 0 .7184-.2896 1.4076-.8054 1.9166-.5158.5089-1.2158.7961-1.9466.7987.7299 0 1.4299.2851 1.946.7925.5161.5073.806 1.1955.806 1.913.0027-.7184.2949-1.4065.8126-1.9136.5177-.5071 1.2187-.7919 1.9495-.7919ZM10.785 33.6407c-.729-.0052-1.42644-.2936-1.94009-.8023-.51365-.5086-.80189-1.1963-.80188-1.9131.00001.7185-.28961 1.4077-.80543 1.9166-.51582.5089-1.21578.7962-1.94658.7988.7308.0026 1.43076.2898 1.94658.7988.51582.5089.80544 1.1981.80543 1.9165-.00001-.7167.28823-1.4044.80188-1.9131.51365-.5086 1.21109-.797 1.94009-.8022Z"
                 fill="#D22856" />
             </svg>
-            <!-- <picture>
-              <source media="(min-width: 1200px)" srcset="./img/logos/logo-large.svg">
-              <source media="(min-width: 660px)" srcset="./img/logos/logo-medium.svg">
-              <img class="main-nav__logo-image" src="./img/logos/logo-small.svg" width="74" height="23"
-                alt="Логотип мобильной версии.">
-            </picture> -->
           </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -195,18 +189,14 @@
         <div class="reviews__list slider">
           <div class="slider__container">
             <button class="slider__button slider__button-next" type="button">
-              <svg width="22" height="41" viewbox="0 0 22 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity=".3"
-                  d="m2.0413 20.5035 19.707-19.0891c.0798-.0765.1431-.16757.1863-.26794.0432-.10038.0654-.208062.0654-.316825 0-.108764-.0222-.216448-.0654-.316821-.0432-.100374-.1065-.191445-.1863-.267944-.0797-.077615-.1745-.139199-.2789-.1812193C21.365.0216304 21.2532 0 21.1401 0c-.113 0-.2248.0216304-.3292.0636507-.1044.0420203-.1992.1036043-.2789.1812193L.252535 19.9088c-.080045.0774-.143557.1693-.1868921.2705C.0223074 20.2805 0 20.389 0 20.4985c0 .1096.0223074.2181.0656429.3193.0433351.1012.1068471.1931.1868921.2705L20.532 40.7621c.1647.1536.3847.2389.6133.2379.1686-.0015.333-.0512.4728-.1428.1397-.0916.2485-.221.3128-.3722.0643-.1511.0813-.3173.0488-.4778-.0324-.1605-.1129-.3081-.2314-.4245L2.0413 20.5035Z"
-                  fill="#283645" />
+              <svg class="slider__button-left" width="22" height="41">
+                <use href="./img/sprite.svg#left-arrow"></use>
               </svg>
               <span class="visually-hidden">Следующий отзыв</span>
             </button>
             <button class="slider__button slider__button-prev" type="button">
-              <svg width="22" height="41" viewbox="0 0 22 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity=".3"
-                  d="M19.9587 20.4965.251671 39.5856c-.079733.0765-.143028.1676-.186228.2679C.0222435 39.9539 0 40.0616 0 40.1704c0 .1087.0222435.2164.065443.3168.0432.1004.106495.1914.186228.2679.079769.0776.174553.1392.278917.1812.104365.0421.216259.0637.329264.0637s.224898-.0216.329258-.0637c.10437-.042.19915-.1036.27892-.1812L21.7475 21.0912c.08-.0774.1435-.1693.1869-.2705.0433-.1012.0656-.2097.0656-.3192 0-.1096-.0223-.2181-.0656-.3193-.0434-.1012-.1069-.1931-.1869-.2705L1.46803.237877C1.30326.0842934 1.08329-.00102615.85474.00000763.6861.00154114.52166.0511971.381939.14278.24222.234364.133411.363811.069088.51498.00476646.666149-.0122204.83234.0202503.992809c.0324707.160471.1129587.308121.2314207.424511L19.9587 20.4965Z"
-                  fill="#283645" />
+              <svg class="slider__button-right" width="22" height="41">
+                <use href="./img/sprite.svg#right-arrow"></use>
               </svg>
               <span class="visually-hidden">Предыдущий отзыв</span>
             </button>
@@ -453,17 +443,26 @@
     <div class="main-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+          <a class="social__link" href="https://vk.com/htmlacademy">
+            <svg class="social__link-vk" width="18" height="11">
+              <use href="./img/sprite.svg#vk"></use>
+            </svg>
             <span class="visually-hidden">Мы в Вконтакте</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+          <a class="social__link" href="https://t.me/htmlacademy">
+            <svg class="social__link-telegram" width="16" height="14">
+              <use href="./img/sprite.svg#telegram"></use>
+            </svg>
             <span class="visually-hidden">Мы в Телеграме</span>
           </a>
         </li>
         <li class="social__item">
-          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+          <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
+            <svg class="social__link-youtube" width="15" height="13">
+              <use href="./img/sprite.svg#youtube"></use>
+            </svg>
             <span class="visually-hidden">Мы в Ютубе</span>
           </a>
         </li>
@@ -472,11 +471,8 @@
     <div class="main-footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <svg class="copyright__link-academy" width="27" height="34" viewbox="0 0 27 34" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M13.6426.0157537 13.5 0 0 1.40733V26.0129L13.5 34 27 26.0129V1.40733L13.6426.0157537ZM25.2344 25.0151 13.5 31.9573 1.76561 25.0151V14.9293l11.68509 6.9158.0194 1.2533-8.01659-4.7436-.01056 1.2253 8.04645 4.8084.0194 1.2865-8.04472-4.7576-.01057 1.2253L13.5 26.9511l8.1239-4.8329V16.909l3.6193-2.1495-.0088 10.2556Zm0-11.5632-3.2197 1.88-1.4822.8752-7.0659-4.187-.0106 1.2253 6.0397 3.5726-.0528.0315-.1303.0752-.859.4919-4.987-2.9477-.0106 1.2253 3.9361 2.328-.933.6092-.0211.0122-2.9714-1.7416-.0106 1.2253 1.9469 1.1342-1.9874 1.1868-11.6182-6.8721 11.6376-6.95789 11.7995 6.83359Zm0-1.2253L13.4401 5.31075 1.76561 12.2196V2.9897L13.5 1.76442 25.2344 2.9897v9.2369Z"
-            fill="#D22856" />
+        <svg class="copyright__link-academy" width="27" height="34">
+          <use href="./img/sprite.svg#academy"></use>
         </svg>
         <span class="visually-hidden">HTML Academy</span>
       </a>

@@ -11,19 +11,33 @@
 
 .copyright__link {
   display: block;
+  color: $red;
 
-  &-academy {
-    width: 27px;
-    height: 34px;
+  // &-academy {
+  //   width: 27px;
+  //   height: 34px;
 
-    &:hover path {
-      fill: $lightblue;
-    }
+  //   // .copyright__link:hover & {
+  //   //   fill: $lightblue;
+  //   // }
 
-    &:active path {
-      fill: $lightblue;
-      opacity: 0.3;
-    }
+  //   // .copyright__link:active & path {
+  //   //   fill: $lightblue;
+  //   //   opacity: 0.3;
+  //   // }
+}
+
+
+.copyright__link-academy {
+  fill: $red;
+
+  .copyright__link:hover & {
+    fill: $lightblue;
+  }
+
+  .copyright__link:active & {
+    fill: $lightblue;
+    opacity: 0.3;
   }
 }
 

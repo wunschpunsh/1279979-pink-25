@@ -20,49 +20,17 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin: 0;
-    margin-top: 22px;
-    margin-right: 20px;
+    margin: 22px 20px 0;
 
-    &--icon-phone {
-      &::before {
-        content: "";
-        position: absolute;
-        background-image: url("../img/phone-icon.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 59px;
-        height: 59px;
-        background-color: $lightgrey;
-        top: -81px;
-        right: -20px;
-      }
-
-      @media (min-width: $desktop-width) {
-        right: 0;
-      }
-    }
-
-    &--icon-mail {
-      &::before {
-        content: "";
-        position: absolute;
-        background-image: url("../img/mail-icon.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 59px;
-        height: 59px;
-        background-color: $lightgrey;
-        top: -81px;
-        right: -20px;
-      }
+    @media (min-width: $desktop-width) {
+      right: 0;
     }
   }
 }
 
 .input__control {
   box-sizing: border-box;
-  padding: 17px 0 17px 20px;
+  padding: 17px 20px;
   border: 2px solid $lightgrey;
   border-radius: 1px;
   font-weight: 400;
@@ -83,13 +51,47 @@
 
   @media (min-width: $tablet-width) {
     width: 100%;
+
+    &--width {
+      width: 437px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 100%;
 
     &--width {
-      width: 371px;
+      width: 312px;
     }
   }
+}
+
+.input__control-container {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
+
+}
+
+.input__control-icon-container {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    width: 59px;
+    height: 59px;
+    background-color: $lightgrey;
+    position: relative;
+  }
+}
+
+.input__control-icon {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
