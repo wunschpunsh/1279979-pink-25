@@ -14,13 +14,45 @@
   }
 }
 
-.main-footer__logo {
-  display: block;
-  margin: 0 auto;
+.main-footer__logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   margin-bottom: 38px;
 
   @media (min-width: $tablet-width) {
     margin: 0;
+  }
+}
+
+.main-footer__link {
+  text-decoration: none;
+
+  &:active .main-footer__logo,
+  &:active .main-footer__logo--decore {
+    opacity: 0.3;
+  }
+
+  &:hover .main-footer__logo--decore path {
+    fill: $red;
+  }
+}
+
+.main-footer__logo {
+  margin-right: 12px;
+
+  &--visible {
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &--visible-desktop {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: inline;
+    }
   }
 }
 

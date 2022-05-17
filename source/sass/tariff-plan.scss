@@ -141,6 +141,7 @@
 }
 
 .tariff-plan__advantage-title {
+  position: relative;
   box-sizing: border-box;
   padding: 24px 125px 24px 21px;
   font-weight: 400;
@@ -162,25 +163,31 @@
     font-size: 17px;
   }
 
-  &--yes {
-    background-image: url("../img/yes.svg");
-    background-repeat: no-repeat;
-    background-position: right 19px bottom 50%;
+  &-yes {
+    position: absolute;
+    right: 19px;
+    bottom: 40%;
+    width: 31px;
+    height: 21px;
 
     @media (min-width: $tablet-width) {
-      background-position: 50% 50%;
+      right: 40%;
+      bottom: 22%;
     }
   }
 
-  &--no {
-    background-image: url("../img/no.svg");
+  &-no {
+    position: absolute;
+    right: 19px;
+    bottom: 30%;
     width: 27px;
     height: 27px;
     background-repeat: no-repeat;
     background-position: right 19px bottom 50%;
 
     @media (min-width: $tablet-width) {
-      background-position: 50% 50%;
+      right: 40%;
+      bottom: 22%;
     }
   }
 
@@ -193,7 +200,7 @@
 
   &--disabled-icon {
     @media (min-width: $tablet-width) {
-      background-image: none;
+      display: none;
     }
   }
 }
