@@ -5,26 +5,26 @@
   @media (min-width: $tablet-width) {
     display: block;
     padding: 102px 20px 38px;
-    background-image: url("../img/timers/timer-medium.png");
+    background-image: url("../img/timers/timer-medium.webp");
     background-repeat: no-repeat;
     background-size: 238px 276px;
     background-position: 20px 54px;
   }
 
   @media (min-width: $tablet-width) and (min-resolution: 2dppx) {
-    background-image: url("../img/timers/timer-medium@2x.png");
+    background-image: url("../img/timers/timer-medium@2x.webp");
   }
 
   @media (min-width: $desktop-width) {
     padding: 115px 166px 120px;
-    background-image: url("../img/timers/timer-large.png");
+    background-image: url("../img/timers/timer-large.webp");
     background-size: 298px 345px;
     background-position: 131px 17px;
     background-color: $grey;
   }
 
   @media (min-width: $desktop-width) and (min-resolution: 2dppx) {
-    background-image: url("../img/timers/timer-large@2x.png");
+    background-image: url("../img/timers/timer-large@2x.webp");
   }
 }
 
