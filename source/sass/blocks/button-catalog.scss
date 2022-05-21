@@ -37,6 +37,11 @@
   }
 }
 
+.button-catalog__like-icon {
+  width: 13px;
+  height: 12px;
+}
+
 .button-catalog__like-text--hit {
   @media (min-width: $tablet-width) {
     margin-left: 0;

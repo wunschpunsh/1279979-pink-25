@@ -40,7 +40,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin-bottom: 36px;
   }
@@ -69,6 +69,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    flex-basis: 33.33%;
     &--position-one {
       order: 1;
     }
@@ -151,6 +152,11 @@
       height: 103px;
     }
   }
+}
+
+.contacts__map-google {
+  width: 100%;
+  height: 100%;
 }
 
 .contacts__link {

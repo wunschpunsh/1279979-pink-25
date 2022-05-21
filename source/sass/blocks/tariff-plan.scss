@@ -163,34 +163,6 @@
     font-size: 17px;
   }
 
-  &-yes {
-    position: absolute;
-    right: 19px;
-    bottom: 40%;
-    width: 31px;
-    height: 21px;
-
-    @media (min-width: $tablet-width) {
-      right: 40%;
-      bottom: 22%;
-    }
-  }
-
-  &-no {
-    position: absolute;
-    right: 19px;
-    bottom: 30%;
-    width: 27px;
-    height: 27px;
-    background-repeat: no-repeat;
-    background-position: right 19px bottom 50%;
-
-    @media (min-width: $tablet-width) {
-      right: 40%;
-      bottom: 22%;
-    }
-  }
-
   &--disabled {
     @media (min-width: $tablet-width) {
       font-size: 1px;
@@ -202,6 +174,34 @@
     @media (min-width: $tablet-width) {
       display: none;
     }
+  }
+}
+
+.tariff-plan__advantage-title-yes {
+  position: absolute;
+  right: 19px;
+  bottom: 40%;
+  width: 31px;
+  height: 21px;
+
+  @media (min-width: $tablet-width) {
+    right: 40%;
+    bottom: 22%;
+  }
+}
+
+.tariff-plan__advantage-title-no {
+  position: absolute;
+  right: 19px;
+  bottom: 30%;
+  width: 27px;
+  height: 27px;
+  background-repeat: no-repeat;
+  background-position: right 19px bottom 50%;
+
+  @media (min-width: $tablet-width) {
+    right: 40%;
+    bottom: 22%;
   }
 }
 

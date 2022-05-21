@@ -12,7 +12,6 @@ import svgmin from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import rename from 'gulp-rename';
 import del from 'del';
-import favicon from 'gulp-favicons';
 
 
 // Styles
@@ -77,7 +76,7 @@ const svg = () => {
 }
 
 const sprite = () => {
-  return gulp.src('source/img/**/*.svg')
+  return gulp.src('source/img/sprite/*.svg')
     .pipe(svgmin())
     .pipe(svgstore({
       inLineSvg: true
@@ -171,6 +170,3 @@ export default gulp.series(
     watcher
   )
 )
-
-
-

@@ -10,6 +10,9 @@
   <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.webp">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="./fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensanslight.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -18,6 +21,7 @@
       <nav class="main-nav main-nav--nojs">
         <div class="main-nav__header-container">
           <a class="main-nav__logo" href="index.html">
+            <span class="visually-hidden">Логотип сайта</span>
             <svg class="main-nav__logo-image main-nav__logo-image--visible-phone" width="74" height="23"
               viewbox="0 0 74 23" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -64,11 +68,11 @@
             <li class="main-nav__item">
               <a class="main-nav__link" href="catalog.html">Фотографии</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--active">
               <a class="main-nav__link">Конкурс</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">html academy</a>
+              <a class="main-nav__link" href="#">HTML academy</a>
             </li>
           </ul>
         </div>
@@ -94,18 +98,23 @@
           <div class="name-form__container">
             <div class="name-form__field-container">
               <label class="name-form__field input">
+                <span class="visually-hidden">Укажите вашу фамилию</span>
                 <span class="input__title input__title--decore input__title--name-position">Фамилия:</span>
                 <input class="input__control" type="text" name="name-form-lastname" placeholder="Укажите фамилию *"
                   required>
               </label>
             </div>
             <div class="name-form__field-container">
-              <label class="name-form__field input"><span class="input__title input__title--decore">Имя:</span>
+              <label class="name-form__field input">
+                <span class="visually-hidden">Укажите ваше имя</span>
+                <span class="input__title input__title--decore">Имя:</span>
                 <input class="input__control" type="text" name="name-form-firstname" placeholder="Введите ваше имя *"
                   required>
               </label>
             </div>
-            <label class="name-form__field input"><span class="input__title input__title--decore">Отчество:</span>
+            <label class="name-form__field input">
+              <span class="visually-hidden">Укажите ваше отчество</span>
+              <span class="input__title input__title--decore">Отчество:</span>
               <input class="input__control" type="text" name="name-form-middlename" id="name-form-middlename"
                 placeholder="Ну и отчество тоже">
             </label>
@@ -178,10 +187,10 @@
               </legend>
               <div class="contacts-form__field-container">
                 <div class="contacts-form__field-wrapper">
-                  <label class="contacts-form__field input input--position" for="contacts-form-phone">
-
-                    <span class="input__title input__title--decore">Номер телефона</span>
+                  <div class="contacts-form__field input input--position">
+                    <label class="input__title input__title--decore" for="contacts-form-phone">Номер телефона</label>
                     <div class="input__control-container">
+                      <span class="visually-hidden">Укажите ваш телефон</span>
                       <input class="input__control input__control--width" type="text" name="contacts-form-phone"
                         id="contacts-form-phone" placeholder="Номер, пожалуйста">
                       <div class="input__control-icon-container">
@@ -190,11 +199,12 @@
                         </svg>
                       </div>
                     </div>
-                  </label>
+                  </div>
                 </div>
-                <label class="contacts-form__field input input--position" for="contacts-form-mail">
-                  <span class="input__title input__title--decore">Адрес почты</span>
+                <div class="contacts-form__field input input--position">
+                  <label class="input__title input__title--decore" for="contacts-form-mail">Адрес почты</label>
                   <div class="input__control-container">
+                    <span class="visually-hidden">Укажите вашу электронную почту</span>
                     <input class="input__control input__control--width" type="email" name="contacts-form-mail"
                       id="contacts-form-mail" placeholder="Введите почту *">
                     <div class="input__control-icon-container">
@@ -203,7 +213,7 @@
                       </svg>
                     </div>
                   </div>
-                </label>
+                </div>
               </div>
             </fieldset>
           </div>
@@ -243,8 +253,11 @@
             <fieldset class="feedback-form__group">
               <legend class="feedback-form__title input__title--decore">Опишите свои эмоции</legend>
               <div class="feedback-form__text-container">
-                <textarea class="feedback-form__text" id="emotions"
-                  name="emotions">Можно прям в красках, не стесняясь в выражениях</textarea>
+                <label>
+                  <span class="visually-hidden">Писать сюда</span>
+                  <textarea class="feedback-form__text" id="emotions"
+                    name="emotions">Можно прям в красках, не стесняясь в выражениях</textarea>
+                </label>
               </div>
             </fieldset>
           </div>
@@ -264,6 +277,7 @@
   <footer class="main-footer">
     <div class="main-footer__logo-container">
       <a class="main-footer__link" href="#">
+        <span class="visually-hidden">Логотип сайта</span>
         <svg class="main-footer__logo main-footer__logo--visible" width="59" height="40" viewbox="0 0 59 40" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"

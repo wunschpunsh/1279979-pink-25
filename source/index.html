@@ -10,6 +10,9 @@
   <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.webp">
   <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="preload" href="./fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensanslight.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body class="page__body">
@@ -18,6 +21,7 @@
       <nav class="main-nav main-nav--nojs">
         <div class="main-nav__header-container">
           <a class="main-nav__logo" href="#">
+            <span class="visually-hidden">Логотип сайта</span>
             <svg class="main-nav__logo-image main-nav__logo-image--visible-phone" width="74" height="23"
               viewbox="0 0 74 23" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -68,21 +72,27 @@
               <a class="main-nav__link" href="form.html">Конкурс</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">html academy</a>
+              <a class="main-nav__link" href="#">HTML academy</a>
             </li>
           </ul>
         </div>
       </nav>
     </div>
     <div class="main-header__content">
-      <p class="main-header__slogan">Взгляните<br> на жизнь<br> иначе!</p>
+      <p class="main-header__slogan">Взгляните<br>&nbsp; на жизнь<br>&nbsp;иначе!</p>
       <picture>
         <source media="(min-width:1200px)"
           srcset="./img/iphone-screens/hand-with-phone-large.webp 1x, ./img/iphone-screens/hand-with-phone-large@2x.webp 2x">
+        <source media="(min-width:1200px)"
+          srcset="./img/iphone-screens/hand-with-phone-large.png 1x, ./img/iphone-screens/hand-with-phone-large@2x.png 2x">
         <source media="(min-width:660px)"
           srcset="./img/iphone-screens/hand-with-phone-medium.webp 1x, ./img/iphone-screens/hand-with-phone-medium@2x.webp 2x">
-        <img class="main-header__image" src="./img/iphone-screens/hand-with-phone-small.webp"
-          srcset="./img/iphone-screens/hand-with-phone-small@2x.webp 2x" width="320" height="286"
+        <source media="(min-width:660px)"
+          srcset="./img/iphone-screens/hand-with-phone-medium.png 1x, ./img/iphone-screens/hand-with-phone-medium@2x.png 2x">
+        <source media="(min-width:320px)"
+          srcset="./img/iphone-screens/hand-with-phone-small.webp 1x, ./img/iphone-screens/hand-with-phone-small@2x.webp 2x">
+        <img class="main-header__image" src="./img/iphone-screens/hand-with-phone-small.png"
+          srcset="./img/iphone-screens/hand-with-phone-small@2x.png 2x" width="320" height="286"
           alt="Рука с телефоном.">
       </picture>
       <div class="main-header__store store">
@@ -132,9 +142,13 @@
         <ul class="advantages__list">
           <li class="advantages__item">
             <div class="advantages__item-image-container">
-              <img class="advantages__item-image" src="./img/iphone-screens/photo-screen-grey-garbage-medium.webp"
-                srcset="./img/iphone-screens/photo-screen-grey-garbage-medium@2x.webp 2x" width="186" height="382"
-                alt="скриншот серой мусорки">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./img/iphone-screens/photo-screen-grey-garbage-medium.webp 1x, ./img/iphone-screens/photo-screen-grey-garbage-medium@2x.webp 2x">
+                <img class="advantages__item-image" src="./img/iphone-screens/photo-screen-grey-garbage-medium.png"
+                  srcset="./img/iphone-screens/photo-screen-grey-garbage-medium@2x.png 2x" width="186" height="382"
+                  alt="скриншот серой мусорки">
+              </picture>
             </div>
             <h3 class="advantages__title">Поднимает настроение</h3>
             <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию<br> буквально
@@ -143,9 +157,13 @@
           </li>
           <li class="advantages__item">
             <div class="advantages__item-image-container">
-              <img class="advantages__item-image" src="./img/iphone-screens/photo-screen-pink-garbage-medium.webp"
-                srcset="./img/iphone-screens/photo-screen-pink-garbage-medium@2x.webp 2x" width="186" height="382"
-                alt="скриншот розовой мусорки">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./img/iphone-screens/photo-screen-pink-garbage-medium.webp 1x, ./img/iphone-screens/photo-screen-pink-garbage-medium@2x.webp 2x">
+                <img class="advantages__item-image" src="./img/iphone-screens/photo-screen-pink-garbage-medium.png"
+                  srcset="./img/iphone-screens/photo-screen-pink-garbage-medium@2x.png 2x" width="186" height="382"
+                  alt="скриншот розовой мусорки">
+              </picture>
             </div>
             <h3 class="advantages__title">Меняет мир<br> вокруг</h3>
             <p class="advantages__description">Сделайте снимок и украсьте его<br> смайликом или текстовой подписью,<br>
@@ -157,11 +175,17 @@
               <picture>
                 <source media="(min-width: 1200px)"
                   srcset="./img/iphone-screens/photo-screen-hello-medium.webp 1x, ./img/iphone-screens/photo-screen-hello-medium@2x.webp 2x">
+                <source media="(min-width: 1200px)"
+                  srcset="./img/iphone-screens/photo-screen-hello-medium.png 1x, ./img/iphone-screens/photo-screen-hello-medium@2x.png 2x">
                 <source media="(min-width: 660px)"
                   srcset="./img/iphone-screens/photo-screen-hello-large.webp 1x, ./img/iphone-screens/photo-screen-hello-large@2x.webp 2x">
-                <img class="advantages__item-image" src="./img/iphone-screens/photo-screen-hello-small.webp"
-                  srcset="./img/iphone-screens/photo-screen-hello-small@2x.webp 2x" width="157" height="320"
-                  alt="скриншот розовой мусорки">
+                <source media="(min-width: 660px)"
+                  srcset="./img/iphone-screens/photo-screen-hello-large.png 1x, ./img/iphone-screens/photo-screen-hello-large@2x.png 2x">
+                <source media="(min-width: 320px)"
+                  srcset="./img/iphone-screens/photo-screen-hello-small.webp 1x, ./img/iphone-screens/photo-screen-hello-small@2x.webp 2x">
+                <img class="advantages__item-image" src="./img/iphone-screens/photo-screen-hello-small.png"
+                  srcset="./img/iphone-screens/photo-screen-hello-small@2x.png 2x" width="157" height="320"
+                  alt="скриншот розовой мусорки, приветствие">
               </picture>
             </div>
             <h3 class="advantages__title">Заводит<br> новых друзей</h3>
@@ -212,19 +236,19 @@
           </blockquote>
           <blockquote class="reviews__item slider__item visually-hidden">
             <div class="reviews__author-info">
-              <cite class="reviews__author-name">Николай Петров</cite>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на
-                привычные
-                серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              <cite class="reviews__author-name">Паша Техник</cite>
+              <span class="reviews__author-resume">30 лет, телезвезда</span>
             </div>
+            <p class="reviews__text">«Крутое приложение, спасибо. Но есть одинк вопрос: почему пропала функция
+              прозрачности текста? Всегда ей пользовалась, а теперь не могу»</p>
           </blockquote>
           <blockquote class="reviews__item slider__item visually-hidden">
             <div class="reviews__author-info">
-              <cite class="reviews__author-name">Николай Петров</cite>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на
-                привычные
-                серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              <cite class="reviews__author-name">Петр Николаев</cite>
+              <span class="reviews__author-resume">30 лет, бездельник</span>
             </div>
+            <p class="reviews__text">«Не могу утверждать, но мне кажется, что функционала стало меньше. Раньше работал
+              с этим приложением в телефоне IPhone, а теперь перешёл на Samsung. Может есть планая версия?»</p>
           </blockquote>
         </div>
         <p class="reviews__toggles slider__toggles">
@@ -369,10 +393,9 @@
           </li>
         </ul>
         <div class="contacts__map">
-          <iframe
+          <iframe class="contacts__map-google" title="Адрес академии"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8224465563626!2d30.31522021617442!3d59.96826866667002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1650919933333!5m2!1sru!2sru"
-            width="100%" height="100%" style="border: 0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
       </div>
@@ -381,6 +404,7 @@
   <footer class="main-footer">
     <div class="main-footer__logo-container">
       <a class="main-footer__link" href="#">
+        <span class="visually-hidden">Логотип сайта</span>
         <svg class="main-footer__logo main-footer__logo--visible" width="59" height="40" viewbox="0 0 59 40" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
