@@ -92,19 +92,20 @@
   @media (min-width: $desktop-width) {
     width: 288px;
   }
-}
 
-.editor__slider-range--disabled {
-  display: none;
 
-  @media (min-width: $tablet-width) {
-    display: block;
-  }
-}
-
-.editor__slider-range-last--disabled {
-  @media (min-width: $tablet-width) {
+  &--disabled {
     display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+
+  &--active {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
   }
 }
 
