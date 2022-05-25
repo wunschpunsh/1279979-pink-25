@@ -14,15 +14,15 @@
 }
 
 .main-form__description-container {
-  padding: 54px 20px 55px;
+  padding: 44px 20px 42px;
   background-color: $white;
 
   @media (min-width: $tablet-width) {
-    padding: 100px 85px 82px;
+    padding: 91px 85px 76px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 100px 222px 70px;
+    padding: 91px 222px 63px;
   }
 }
 
@@ -55,7 +55,7 @@
 }
 
 .main-form__footer {
-  padding: 0 20px 26px;
+  padding: 0 22px 26px;
   background-color: $white;
 
   @media (min-width: $tablet-width) {
@@ -73,9 +73,9 @@
 }
 
 .main-form__send {
-  margin-bottom: 46px;
+  margin-bottom: 36px;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     margin-bottom: 0;
   }
 }

@@ -1,14 +1,14 @@
 .reviews__container {
-  padding: 50px 20px 60px 20px;
+  padding: 42px 20px 37px;
   background-color: $white;
   position: relative;
 
   @media (min-width: $tablet-width) {
-    padding: 100px 20px 0;
+    padding: 82px 20px 15px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 193px 130px 41px;
+    padding: 184px 130px 35px;
   }
 }
 
@@ -21,7 +21,7 @@
     display: block;
     position: absolute;
     top: 72px;
-    left: 50%;
+    left: 47%;
   }
 }
 
@@ -55,7 +55,7 @@
 }
 
 .reviews__author-name {
-  margin-bottom: 31px;
+  margin-bottom: 13px;
   display: block;
   font-style: normal;
   font-weight: 700;
@@ -94,9 +94,10 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 51px;
+    margin-bottom: 37px;
     font-size: 18px;
   }
 }

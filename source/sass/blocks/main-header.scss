@@ -1,3 +1,11 @@
+.main-header__container {
+  background-color: #2b22224b;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 130px;
+  }
+}
+
 .main-header {
   background-color: $black;
   color: $white;
@@ -8,6 +16,7 @@
   background-image: url("../img/background/background-header-small.webp");
   background-color: $black;
   background-repeat: no-repeat;
+  background-size: 320px 462px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/background/background-header-small@2x.webp");
@@ -35,20 +44,20 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    padding: 102px 20px 119px;
+    padding: 95px 20px 114px;
     width: 50%;
     z-index: 2;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 114px 130px 130px;
+    padding: 96px 130px 125px;
     width: 310px;
   }
 }
 
 .main-header__slogan {
   margin: 0;
-  padding: 29px 20px 320px;
+  padding: 24px 20px 314px;
   font-weight: 300;
   font-size: 24px;
   line-height: 29px;
@@ -63,15 +72,15 @@
   }
 
   @media (min-width: $tablet-width) {
-    margin: 0;
-    margin-bottom: 39px;
+    width: 247px;
+    margin: 0 0 29px 27px;
     padding: 0;
     font-size: 40px;
     line-height: 48px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 51px;
+    margin-bottom: 37px;
     font-size: 50px;
     line-height: 68px;
   }
@@ -79,7 +88,7 @@
 
 .main-header__slogan-form {
   margin: 0;
-  padding: 36px 46px 51px;
+  padding: 28px 46px 44px;
   font-weight: 300;
   font-size: 24px;
   line-height: 33px;
@@ -87,19 +96,19 @@
   color: $white;
 
   @media (min-width: $tablet-width) {
-    padding: 61px 20px 65px;
+    padding: 68px 20px 59px;
     font-size: 50px;
     line-height: 68px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 74px 226px 104px;
+    padding: 57px 226px 89px;
   }
 }
 
 .main-header__image {
   position: absolute;
-  bottom: 286px;
+  bottom: 271px;
   left: 0;
 
   @media (min-width: $tablet-width) {
@@ -119,7 +128,7 @@
 
 .main-header__catalog-slogan {
   margin: 0;
-  padding: 36px 74px 84px;
+  padding: 28px 74px 77px;
   font-weight: 300;
   font-size: 24px;
   line-height: 33px;
@@ -127,18 +136,18 @@
   color: $white;
 
   @media (min-width: $tablet-width) {
-    padding: 81px 151px 143px;
+    padding: 67px 151px 128px;
     font-size: 50px;
     line-height: 68px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 74px 422px 104px;
+    padding: 57px 422px 89px;
   }
 }
 
 .main-header__store {
-  padding: 28px 20px 38px 20px;
+  padding: 28px 20px 28px;
   background-color: $darkblue;
 
   @media (min-width: $tablet-width) {

@@ -9,11 +9,11 @@
 }
 
 .contacts-form__container {
-  padding: 42px 22px 44px;
+  padding: 42px 22px 43px;
   background-color: $white;
 
   @media (min-width: $tablet-width) {
-    padding: 0 0 51px;
+    padding: 0 0 46px;
   }
 }
 
@@ -42,6 +42,7 @@
 
     @media (min-width: $tablet-width) {
       padding: 14px 31px;
+      margin-bottom: 23px;
     }
   }
 }
@@ -59,7 +60,11 @@
 }
 
 .contacts-form__field-wrapper {
-  margin-bottom: 41px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
 
   @media (min-width: $desktop-width) {
     margin: 0;

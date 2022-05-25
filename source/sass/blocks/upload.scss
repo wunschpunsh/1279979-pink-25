@@ -5,60 +5,59 @@
 }
 
 .upload__container {
+  background-color: $grey;
+
   @media (min-width: $tablet-width) {
     display: flex;
+    background-color: $grey;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0 130px;
-    background-color: $grey;
   }
 }
 
 .upload__image {
   padding: 20px 20px 0;
-  margin-bottom: 42px;
+  margin-bottom: 34px;
 
   @media (min-width: $tablet-width) {
-    padding: 57px 20px 54px;
+    padding: 57px 20px 47px;
     margin: 0;
     width: 300px;
     height: 400px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 57px 50px 57px 80px;
+    padding: 57px 50px 50px 80px;
     margin: 0;
   }
 }
 
 .upload__all-editor {
   @media (min-width: $tablet-width) {
-    padding: 66px 30px 54px;
+    padding: 53px 19px 53px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 57px 60px 57px 40px;
+    padding: 53px 42px 57px 41px;
     width: 100%;
   }
 }
 
-.upload__editor-container {
-  margin-bottom: 27px;
-}
-
 .upload__buttons-container {
-  padding: 38px 20px 41px;
+  padding: 71px 20px 41px;
   border-top: 1px solid #2836451a;
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    margin-left: 8px;
     border: none;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
-    justify-content: space-between;
+    margin-left: 0;
   }
 }
 
@@ -73,6 +72,7 @@
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
     width: 183px;
+    margin-right: 42px;
   }
 }
 

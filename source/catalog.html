@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page nojs" lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -13,6 +13,7 @@
   <link rel="preload" href="./fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/opensanslight.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <script>document.documentElement.classList.remove('nojs')</script>
 </head>
 
 <body class="page__body">
@@ -147,7 +148,8 @@
             </a>
             <div class="user-card__container">
               <p class="user-card__author">Левон&nbsp;<span class="user-card__time">(5 часов назад)</span></p>
-              <p class="user-card__description">Вчера он на луну летал, сегодня в<br>руки к нам попал.</p>
+              <p class="user-card__description user-card__description--position">Вчера он на луну летал, сегодня
+                в<br>руки к нам попал.</p>
               <div class="user-card__like button-catalog">
                 <button class="button-catalog__like" type="button">
                   <span class="visually-hidden">Лайк!</span>
@@ -209,7 +211,8 @@
             </a>
             <div class="user-card__container">
               <p class="user-card__author">Борис&nbsp;<span class="user-card__time">(20 часов назад)</span></p>
-              <p class="user-card__description">Здесь могла быть ваша цитата о<br>высоком и вечном.</p>
+              <p class="user-card__description user-card__description--position">Здесь могла быть ваша цитата
+                о<br>высоком и вечном.</p>
               <div class="user-card__like button-catalog">
                 <button class="button-catalog__like" type="button">
                   <span class="visually-hidden">Лайк!</span>
@@ -401,7 +404,7 @@
       </form>
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer main-footer--position">
     <div class="main-footer__logo-container">
       <a class="main-footer__link" href="./index.html">
         <span class="visually-hidden">Логотип сайта</span>

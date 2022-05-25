@@ -1,6 +1,5 @@
 .main-nav {
   position: relative;
-  background-color: #0000004b;
   box-sizing: border-box;
   padding: 0;
 
@@ -15,7 +14,8 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    justify-content: space-around;
+    background-color: transparent;
+    // justify-content: space-around;
   }
 }
 
@@ -31,8 +31,9 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    justify-content: space-between;
-    padding: 41px 0 43px;
+    // justify-content: space-between;
+    padding: 27px 0 43px;
+    margin-right: 173px;
   }
 }
 
@@ -121,7 +122,7 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 21 px;
+  top: 21px;
   right: 20px;
   z-index: 2;
   display: block;
@@ -132,7 +133,7 @@
   border: none;
 
   @media (min-width: $tablet-width) {
-    top: 35px;
+    top: 44px;
   }
 
   @media (min-width: $desktop-width) {
@@ -167,6 +168,10 @@
   top: 20px;
   left: auto;
   width: 23px;
+
+  @media (min-width: $tablet-width) {
+    top: 35px;
+  }
 }
 
 
@@ -213,17 +218,17 @@
     width: 620px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    // justify-content: space-around;
     align-items: center;
-    padding-top: 48px;
+    padding-top: 45px;
   }
 }
 
-.main-nav--nojs .main-nav__toggle {
+.nojs .main-nav__toggle {
   display: none;
 }
 
-.main-nav--nojs .main-nav__header-container {
+.nojs .main-nav__header-container {
   background-color: $lightblue;
 
   @media (min-width: $desktop-width) {
@@ -231,13 +236,13 @@
   }
 }
 
-.main-nav--nojs .main-nav__container {
+.nojs .main-nav__container {
   display: block;
   position: static;
   min-height: 0;
 }
 
-.main-nav--nojs .main-nav__item {
+.nojs .main-nav__item {
   display: block;
   background-color: $lightblue;
 
@@ -246,7 +251,7 @@
   }
 }
 
-.main-nav--nojs .main-nav__link {
+.nojs .main-nav__link {
   padding-right: 21px;
   padding-left: 21px;
   text-align: left;
@@ -263,6 +268,10 @@
     text-transform: capitalize;
     box-shadow: none;
 
+    &:not(:last-child) {
+      margin-right: 79px;
+    }
+
     &--active {
       position: relative;
 
@@ -270,7 +279,7 @@
         content: "";
         position: absolute;
         right: 0;
-        bottom: -19px;
+        bottom: -13px;
         left: 0;
         height: 2px;
         background-color: $white;
@@ -281,7 +290,7 @@
 
 .main-nav__link {
   display: block;
-  padding-top: 15px;
+  padding-top: 18px;
   padding-bottom: 15px;
   font-weight: 700;
   font-size: 18px;
@@ -298,6 +307,10 @@
   &:active {
     color: $red;
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 16px 0;
   }
 
   @media (min-width: $desktop-width) {

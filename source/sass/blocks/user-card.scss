@@ -1,5 +1,5 @@
 .user-card {
-  margin: 0 10px 20px;
+  margin: 0 10px 21px;
   display: flex;
   flex-direction: column;
 
@@ -9,6 +9,7 @@
 
   @media (min-width: $desktop-width) {
     width: calc(33% - 17px);
+    margin-bottom: 50px;
   }
 
   &--hit {
@@ -43,6 +44,10 @@
 
     @media (min-width: $tablet-width) {
       width: 100%;
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: $desktop-width) {
       margin-bottom: 50px;
     }
   }
@@ -63,31 +68,37 @@
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
-  padding: 26px 10px 26px 17px;
+  padding: 19px 10px 16px 17px;
   background-color: $grey;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
-    padding: 30px;
+    padding: 27px 30px 25px 31px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 30px 27px;
+    padding: 30px 30px 27px 27px;
+    // padding-right: 30px;
   }
 
   &--hit {
-    margin: 0 20px 20px 20px;
-    padding: 25px 10px 25px 17px;
+    margin: 0 20px 19px;
+    padding: 19px 10px 17px 17px;
     background-color: $grey;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 0;
-      padding: 30px;
+      padding: 29px 30px 29px 30px;
+
+      br {
+        display: none;
+      }
     }
 
     @media (min-width: $desktop-width) {
       margin: 0 130px;
       padding: 30px;
+      padding-bottom: 24px;
     }
   }
 }
@@ -120,16 +131,19 @@
 
 .user-card__author {
   margin: 0;
-  margin-bottom: 14px;
+  margin-bottom: 2px;
   font-weight: 700;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 24px;
   color: $lightblue;
 
   @media (min-width: $tablet-width) {
     &--hit {
       flex-basis: 50%;
+      margin-bottom: 4px;
     }
+    line-height: 14px;
+    margin-bottom: 3px;
   }
 }
 
@@ -139,18 +153,33 @@
   line-height: 21px;
   text-transform: uppercase;
   color: $lightblue;
+
+  @media (min-width: $tablet-width) {
+    line-height: 12px;
+  }
 }
 
 .user-card__description {
   margin: 0;
   width: 100%;
-  margin-bottom: 23px;
+  margin-bottom: 9px;
   font-weight: 400;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 24px;
   color: $lightblue;
 
+  @media (min-width: $tablet-width) {
+    flex-basis: 100%;
+    margin-bottom: 45px;
+
+    &--position {
+      margin-bottom: 22px;
+    }
+  }
+
   &--hit {
+    // margin-bottom: 9px;
+
     @media (min-width: $tablet-width) {
       margin-bottom: 0;
       order: 3;

@@ -4,7 +4,7 @@
 
   @media (min-width: $tablet-width) {
     display: block;
-    padding: 102px 20px 38px;
+    padding: 99px 20px 38px;
     background-image: url("../img/timers/timer-medium.webp");
     background-repeat: no-repeat;
     background-size: 238px 276px;
@@ -16,10 +16,10 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 115px 166px 120px;
+    padding: 95px 166px 111px;
     background-image: url("../img/timers/timer-large.webp");
     background-size: 298px 345px;
-    background-position: 131px 17px;
+    background-position: 131px 0;
     background-color: $grey;
   }
 
@@ -33,14 +33,18 @@
     width: 50%;
     margin-left: auto;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 61.5%;
+  }
 }
 
 .note__title {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   font-weight: 700;
   font-size: 30px;
-  line-height: 1;
+  line-height: 36px;
   color: $black;
 
   @media (min-width: $desktop-width) {
@@ -48,24 +52,25 @@
       display: none;
     }
     line-height: 30px;
+    margin-bottom: 25px;
   }
 }
 
 .note__description {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   font-weight: 400;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 23px;
   color: #283645;
 
   @media (min-width: $desktop-width) {
     br {
       display: none;
     }
-    margin-bottom: 47px;
+    margin-bottom: 31px;
     font-size: 18px;
-    line-height: 25px;
+    line-height: 30px;
   }
 }
 

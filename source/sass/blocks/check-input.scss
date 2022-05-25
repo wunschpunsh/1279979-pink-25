@@ -17,6 +17,10 @@
   line-height: 1.4;
   color: $lightblue;
   text-align: center;
+
+  @media (min-width: $desktop-width) {
+    padding-left: 26px;
+  }
 }
 
 .check-input__description-soft {
