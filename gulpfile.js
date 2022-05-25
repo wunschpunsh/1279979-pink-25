@@ -12,7 +12,6 @@ import svgmin from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import rename from 'gulp-rename';
 import del from 'del';
-import favicon from 'gulp-favicons';
 
 
 // Styles
@@ -34,7 +33,7 @@ export const styles = () => {
 
 const html = () => {
   return gulp.src('source/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({ collapseWhitespace: false }))
     .pipe(gulp.dest('build'))
 }
 
@@ -77,7 +76,7 @@ const svg = () => {
 }
 
 const sprite = () => {
-  return gulp.src('source/img/**/*.svg')
+  return gulp.src('source/img/sprite/*.svg')
     .pipe(svgmin())
     .pipe(svgstore({
       inLineSvg: true
@@ -86,21 +85,14 @@ const sprite = () => {
     .pipe(gulp.dest('build/img'))
 }
 
-// Favicon
-
-const createFavicon = () => {
-  return gulp.src(['source/*.ico', 'source/*.webmanifest'])
-    .pipe(favicon())
-    .pipe(gulp.dest('build'))
-}
 
 // Copy
 
 const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
-    'source/*.ico',
-    'source/*.webmanifest',
+    'source/favicon.ico',
+    'source/manifest.webmanifest',
   ], {
     base: 'source'
   })
@@ -155,8 +147,7 @@ export const build = gulp.series(
     scripts,
     svg,
     sprite,
-    createWebp,
-    createFavicon
+    createWebp
   )
 )
 
@@ -165,21 +156,17 @@ export const build = gulp.series(
 export default gulp.series(
   clean,
   copy,
-  copyImages,
+  optimizeImages,
   gulp.parallel(
     styles,
     html,
     scripts,
     svg,
     sprite,
-    createWebp,
-    createFavicon
+    createWebp
   ),
   gulp.series(
     server,
     watcher
   )
 )
-
-
-

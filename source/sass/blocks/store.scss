@@ -1,0 +1,93 @@
+
+.store__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 33px 0 15px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 46px;
+  }
+}
+
+.store__item {
+  list-style: none;
+  flex-basis: 33.33%;
+
+  @media (min-width: $desktop-width) {
+    &:not(:last-child) {
+      margin-right: 27px;
+    }
+  }
+}
+
+.store__link {
+  display: block;
+}
+
+.store__link-apple {
+  width: 47px;
+  height: 56px;
+}
+
+.store__link-android {
+  width: 43px;
+  height: 47px;
+}
+
+.store__link-microsoft {
+  width: 44px;
+  height: 41px;
+}
+
+.store__download {
+  color: $white;
+  border: 3px solid $white;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 1px;
+
+  &:hover {
+    background-color: $white;
+    color: $red;
+    box-shadow: 0 5px 7px rgba(1, 1, 1, 0.75);
+  }
+
+  &:active {
+    background-color: $white;
+    color: #d228564d;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 21px;
+    margin-bottom: 66px;
+    padding: 16px 29px;
+  }
+}
+
+.store__description {
+  margin: 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  align-items: center;
+  text-align: center;
+  color: $white;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 300px;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,41 @@
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.copyright__link {
+  display: block;
+  color: $red;
+}
+
+
+.copyright__link-academy {
+  fill: $red;
+
+  .copyright__link:hover & {
+    fill: $lightblue;
+  }
+
+  .copyright__link:active & {
+    fill: $lightblue;
+    opacity: 0.3;
+  }
+}
+
+.copyright__text {
+  margin-right: 15px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $lightblue;
+
+  @media (min-width: $desktop-width) {
+    font-size: 18px;
+  }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page nojs" lang="ru">
 
 <head>
   <meta charset="utf-8">
@@ -8,8 +8,12 @@
   <link rel="stylesheet" href="./css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png">
+  <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.webp">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="./fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensanslight.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <script>document.documentElement.classList.remove('nojs')</script>
 </head>
 
 <body class="page__body">
@@ -18,6 +22,7 @@
       <nav class="main-nav main-nav--nojs">
         <div class="main-nav__header-container">
           <a class="main-nav__logo" href="index.html">
+            <span class="visually-hidden">Логотип сайта</span>
             <svg class="main-nav__logo-image main-nav__logo-image--visible-phone" width="74" height="23"
               viewbox="0 0 74 23" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -51,12 +56,6 @@
                 d="M50.9203 15.9169c-.593.0013-1.1805-.1124-1.7288-.3347-.5483-.2222-1.0467-.5485-1.4665-.9603-.4198-.4119-.7529-.901-.9802-1.4396-.2272-.5385-.3442-1.1158-.3442-1.6988-.0027 1.1767-.48 2.3043-1.3273 3.1355-.8474.8311-1.9955 1.2979-3.1924 1.2979 1.1979.0026 2.3459.4716 3.193 1.3043.847.8327 1.324 1.9613 1.3267 3.139 0-1.1785.4762-2.3086 1.3238-3.1419.8476-.8333 1.9972-1.3014 3.1959-1.3014ZM38.0744 19.3826c-.7326 0-1.4351-.286-1.9531-.7953-.518-.5092-.809-1.1998-.809-1.92 0 .7184-.2896 1.4076-.8054 1.9166-.5158.5089-1.2158.7961-1.9466.7987.7299 0 1.4299.2851 1.946.7925.5161.5073.806 1.1955.806 1.913.0027-.7184.2949-1.4065.8126-1.9136.5177-.5071 1.2187-.7919 1.9495-.7919ZM10.785 33.6407c-.729-.0052-1.42644-.2936-1.94009-.8023-.51365-.5086-.80189-1.1963-.80188-1.9131.00001.7185-.28961 1.4077-.80543 1.9166-.51582.5089-1.21578.7962-1.94658.7988.7308.0026 1.43076.2898 1.94658.7988.51582.5089.80544 1.1981.80543 1.9165-.00001-.7167.28823-1.4044.80188-1.9131.51365-.5086 1.21109-.797 1.94009-.8022Z"
                 fill="#D22856" />
             </svg>
-            <!-- <picture>
-              <source media="(min-width: 1200px)" srcset="./img/logos/logo-large.svg">
-              <source media="(min-width: 660px)" srcset="./img/logos/logo-medium.svg">
-              <img class="main-nav__logo-image" src="./img/logos/logo-small.svg" width="74" height="23"
-                alt="Логотип мобильной версии.">
-            </picture> -->
           </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -67,14 +66,14 @@
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--active">
               <a class="main-nav__link">Фотографии</a>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="form.html">Конкурс</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">html academy</a>
+              <a class="main-nav__link" href="#">HTML academy</a>
             </li>
           </ul>
         </div>
@@ -94,14 +93,22 @@
       <div class="catalog__container">
         <div class="catalog__hit-container">
           <div class="catalog__hit user-card user-card--hit">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="./img/photo/bridge-large.jpg 1x, ./img/photo/bridge-large@2x.jpg 2x">
-              <source media="(min-width: 660px)"
-                srcset="./img/photo/bridge-medium.jpg 1x, ./img/photo/bridge-medium@2x.jpg 2x">
-              <img class="user-card__photo user-card__photo--hit" src="./img/photo/bridge-small.jpg" width="320"
-                height="137" srcset="./img/photo/bridge-small@2x.jpg 2x" alt="Панорама моста.">
-            </picture>
+            <a class="user-card__photo-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./img/photo/bridge-large.webp 1x, ./img/photo/bridge-large@2x.webp 2x">
+                <source media="(min-width: 1200px)"
+                  srcset="./img/photo/bridge-large.jpg 1x, ./img/photo/bridge-large@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="./img/photo/bridge-medium.webp 1x, ./img/photo/bridge-medium@2x.webp 2x">
+                <source media="(min-width: 660px)"
+                  srcset="./img/photo/bridge-medium.jpg 1x, ./img/photo/bridge-medium@2x.jpg 2x">
+                <source media="(min-width: 320px)"
+                  srcset="./img/photo/bridge-small.webp 1x, ./img/photo/bridge-small@2x.webp 2x">
+                <img class="user-card__photo user-card__photo--hit" src="./img/photo/bridge-small.jpg" width="320"
+                  height="137" srcset="./img/photo/bridge-small@2x.jpg 2x" alt="Панорама моста.">
+              </picture>
+            </a>
             <div class="user-card__container user-card__container--hit">
               <p class="user-card__author user-card__author--hit">Анна&nbsp;<span class="user-card__time">(5 минут
                   назад)</span></p>
@@ -112,7 +119,7 @@
               <div class="user-card__like button-catalog button-catalog--hit">
                 <button class="button-catalog__like" type="button">
                   <span class="visually-hidden">Лайк!</span>
-                  <svg class="button-catalog__like-icon" width="13" height="12">
+                  <svg class="button-catalog__like-icon">
                     <use href="./img/sprite.svg#like"></use>
                   </svg>
                 </button>
@@ -123,25 +130,31 @@
         </div>
         <ul class="catalog__list">
           <li class="catalog__item user-card">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="./img/photo/car-large.jpg 1x, ./img/photo/car-large@2x.jpg 2x">
-              <source media="(min-width: 660px)"
-                srcset="./img/photo/car-medium.jpg 1x, ./img/photo/car-medium@2x.jpg 2x">
-              <img class="user-card__photo" src="./img/photo/car-small.jpg" width="280" height="180"
-                srcset="./img/photo/car-small@2x.jpg 2x" alt="Фотография автомобиля.">
-            </picture>
+            <a class="user-card__photo-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./img/photo/car-large.webp 1x, ./img/photo/car-large@2x.webp 2x">
+                <source media="(min-width: 1200px)"
+                  srcset="./img/photo/car-large.jpg 1x, ./img/photo/car-large@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="./img/photo/car-medium.webp 1x, ./img/photo/car-medium@2x.webp 2x">
+                <source media="(min-width: 660px)"
+                  srcset="./img/photo/car-medium.jpg 1x, ./img/photo/car-medium@2x.jpg 2x">
+                <source media="(min-width: 320px)"
+                  srcset="./img/photo/car-small.webp 1x, ./img/photo/car-small@2x.webp 2x">
+                <img class="user-card__photo" src="./img/photo/car-small.jpg" width="280" height="180"
+                  srcset="./img/photo/car-small@2x.jpg 2x" alt="Фотография автомобиля.">
+              </picture>
+            </a>
             <div class="user-card__container">
               <p class="user-card__author">Левон&nbsp;<span class="user-card__time">(5 часов назад)</span></p>
-              <p class="user-card__description">Вчера он на луну летал, сегодня в<br>руки к нам попал.</p>
+              <p class="user-card__description user-card__description--position">Вчера он на луну летал, сегодня
+                в<br>руки к нам попал.</p>
               <div class="user-card__like button-catalog">
                 <button class="button-catalog__like" type="button">
                   <span class="visually-hidden">Лайк!</span>
-                  <svg class="button-catalog__like-icon" width="13" height="12" viewbox="0 0 13 12" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M6.4687 12a.7823.7823 0 0 1-.3188-.0633.756.756 0 0 1-.2617-.1867C1.9592 7.42 1.0366 6.44.8604 6.17.3071 5.495.0042 4.6606 0 3.8c.0044-.7257.223-1.4353.6303-2.0455.4073-.6102.9864-1.0959 1.6694-1.4002A4.0902 4.0902 0 0 1 4.4872.0364C5.233.1331 5.9346.4326 6.5102.9 7.2276.3195 8.1341.001 9.0706 0c1.0429.0026 2.0422.4042 2.7787 1.1165.7365.7124 1.1501 1.6774 1.1501 2.6835.0145.8772-.315 1.7272-.9226 2.38l-5.038 5.56a.7567.7567 0 0 1-.257.1846.7806.7806 0 0 1-.3132.0654V12ZM2.0733 5.28c.2177.26 2.5605 2.84 4.3954 4.86L10.947 5.2c.3603-.382.5535-.8837.539-1.4 0-.618-.2544-1.2106-.7074-1.6476-.453-.437-1.0673-.6824-1.708-.6824a2.5947 2.5947 0 0 0-1.0966.2519 2.5026 2.5026 0 0 0-.873.6881.8162.8162 0 0 1-.2744.2038.8437.8437 0 0 1-.3372.0762.7575.7575 0 0 1-.3327-.0816.7286.7286 0 0 1-.2582-.2184 2.4309 2.4309 0 0 0-.8676-.682 2.521 2.521 0 0 0-1.0916-.238 2.4902 2.4902 0 0 0-1.2801.3702c-.3824.2365-.6882.572-.8826.9679a2.267 2.267 0 0 0-.2173 1.272c.0525.4352.2306.8475.514 1.1899v.01Z"
-                      fill="#D22856" />
+                  <svg class="button-catalog__like-icon">
+                    <use href="./img/sprite.svg#like"></use>
                   </svg>
                 </button>
                 <span class="button-catalog__like-text">Нравится: 356</span>
@@ -149,25 +162,30 @@
             </div>
           </li>
           <li class="catalog__item user-card">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="./img/photo/drums-large.jpg 1x, ./img/photo/drums-large@2x.jpg 2x">
-              <source media="(min-width: 660px)"
-                srcset="./img/photo/drums-medium.jpg 1x, ./img/photo/drums-medium@2x.jpg 2x">
-              <img class="user-card__photo" src="./img/photo/drums-small.jpg" width="280" height="180"
-                srcset="./img/photo/drums-small@2x.jpg 2x" alt="Барабаны.">
-            </picture>
+            <a class="user-card__photo-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./img/photo/drums-large.webp 1x, ./img/photo/drums-large@2x.webp 2x">
+                <source media="(min-width: 1200px)"
+                  srcset="./img/photo/drums-large.jpg 1x, ./img/photo/drums-large@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="./img/photo/drums-medium.webp 1x, ./img/photo/drums-medium@2x.webp 2x">
+                <source media="(min-width: 660px)"
+                  srcset="./img/photo/drums-medium.jpg 1x, ./img/photo/drums-medium@2x.jpg 2x">
+                <source media="(min-width: 320px)"
+                  srcset="./img/photo/drums-small.webp 1x, ./img/photo/drums-small@2x.webp 2x">
+                <img class="user-card__photo" src="./img/photo/drums-small.jpg" width="280" height="180"
+                  srcset="./img/photo/drums-small@2x.jpg 2x" alt="Барабаны.">
+              </picture>
+            </a>
             <div class="user-card__container">
               <p class="user-card__author">Антон&nbsp;<span class="user-card__time">(12 часов назад)</span></p>
               <p class="user-card__description">Соседи будут рады!</p>
               <div class="user-card__like button-catalog">
                 <button class="button-catalog__like" type="button">
                   <span class="visually-hidden">Лайк!</span>
-                  <svg class="button-catalog__like-icon" width="13" height="12" viewbox="0 0 13 12" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M6.4687 12a.7823.7823 0 0 1-.3188-.0633.756.756 0 0 1-.2617-.1867C1.9592 7.42 1.0366 6.44.8604 6.17.3071 5.495.0042 4.6606 0 3.8c.0044-.7257.223-1.4353.6303-2.0455.4073-.6102.9864-1.0959 1.6694-1.4002A4.0902 4.0902 0 0 1 4.4872.0364C5.233.1331 5.9346.4326 6.5102.9 7.2276.3195 8.1341.001 9.0706 0c1.0429.0026 2.0422.4042 2.7787 1.1165.7365.7124 1.1501 1.6774 1.1501 2.6835.0145.8772-.315 1.7272-.9226 2.38l-5.038 5.56a.7567.7567 0 0 1-.257.1846.7806.7806 0 0 1-.3132.0654V12ZM2.0733 5.28c.2177.26 2.5605 2.84 4.3954 4.86L10.947 5.2c.3603-.382.5535-.8837.539-1.4 0-.618-.2544-1.2106-.7074-1.6476-.453-.437-1.0673-.6824-1.708-.6824a2.5947 2.5947 0 0 0-1.0966.2519 2.5026 2.5026 0 0 0-.873.6881.8162.8162 0 0 1-.2744.2038.8437.8437 0 0 1-.3372.0762.7575.7575 0 0 1-.3327-.0816.7286.7286 0 0 1-.2582-.2184 2.4309 2.4309 0 0 0-.8676-.682 2.521 2.521 0 0 0-1.0916-.238 2.4902 2.4902 0 0 0-1.2801.3702c-.3824.2365-.6882.572-.8826.9679a2.267 2.267 0 0 0-.2173 1.272c.0525.4352.2306.8475.514 1.1899v.01Z"
-                      fill="#D22856" />
+                  <svg class="button-catalog__like-icon">
+                    <use href="./img/sprite.svg#like"></use>
                   </svg>
                 </button>
                 <span class="button-catalog__like-text">Нравится: 666</span>
@@ -175,25 +193,31 @@
             </div>
           </li>
           <li class="catalog__item user-card">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="./img/photo/roof-large.jpg 1x, ./img/photo/roof-large@2x.jpg 2x">
-              <source media="(min-width: 660px)"
-                srcset="./img/photo/roof-medium.jpg 1x, ./img/photo/roof-medium@2x.jpg 2x">
-              <img class="user-card__photo" src="./img/photo/roof-small.jpg" srcset="./img/photo/roof-small@2x.jpg 2x"
-                width="280" height="180" alt="Вид на стеклянную крышу.">
-            </picture>
+            <a class="user-card__photo-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./img/photo/roof-large.webp 1x, ./img/photo/roof-large@2x.webp 2x">
+                <source media="(min-width: 1200px)"
+                  srcset="./img/photo/roof-large.jpg 1x, ./img/photo/roof-large@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="./img/photo/roof-medium.webp 1x, ./img/photo/roof-medium@2x.webp 2x">
+                <source media="(min-width: 660px)"
+                  srcset="./img/photo/roof-medium.jpg 1x, ./img/photo/roof-medium@2x.jpg 2x">
+                <source media="(min-width: 320px)"
+                  srcset="./img/photo/roof-small.webp 1x, ./img/photo/roof-small@2x.webp 2x">
+                <img class="user-card__photo" src="./img/photo/roof-small.jpg" srcset="./img/photo/roof-small@2x.jpg 2x"
+                  width="280" height="180" alt="Вид на стеклянную крышу.">
+              </picture>
+            </a>
             <div class="user-card__container">
               <p class="user-card__author">Борис&nbsp;<span class="user-card__time">(20 часов назад)</span></p>
-              <p class="user-card__description">Здесь могла быть ваша цитата о<br>высоком и вечном.</p>
+              <p class="user-card__description user-card__description--position">Здесь могла быть ваша цитата
+                о<br>высоком и вечном.</p>
               <div class="user-card__like button-catalog">
                 <button class="button-catalog__like" type="button">
                   <span class="visually-hidden">Лайк!</span>
-                  <svg class="button-catalog__like-icon" width="13" height="12" viewbox="0 0 13 12" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M6.4687 12a.7823.7823 0 0 1-.3188-.0633.756.756 0 0 1-.2617-.1867C1.9592 7.42 1.0366 6.44.8604 6.17.3071 5.495.0042 4.6606 0 3.8c.0044-.7257.223-1.4353.6303-2.0455.4073-.6102.9864-1.0959 1.6694-1.4002A4.0902 4.0902 0 0 1 4.4872.0364C5.233.1331 5.9346.4326 6.5102.9 7.2276.3195 8.1341.001 9.0706 0c1.0429.0026 2.0422.4042 2.7787 1.1165.7365.7124 1.1501 1.6774 1.1501 2.6835.0145.8772-.315 1.7272-.9226 2.38l-5.038 5.56a.7567.7567 0 0 1-.257.1846.7806.7806 0 0 1-.3132.0654V12ZM2.0733 5.28c.2177.26 2.5605 2.84 4.3954 4.86L10.947 5.2c.3603-.382.5535-.8837.539-1.4 0-.618-.2544-1.2106-.7074-1.6476-.453-.437-1.0673-.6824-1.708-.6824a2.5947 2.5947 0 0 0-1.0966.2519 2.5026 2.5026 0 0 0-.873.6881.8162.8162 0 0 1-.2744.2038.8437.8437 0 0 1-.3372.0762.7575.7575 0 0 1-.3327-.0816.7286.7286 0 0 1-.2582-.2184 2.4309 2.4309 0 0 0-.8676-.682 2.521 2.521 0 0 0-1.0916-.238 2.4902 2.4902 0 0 0-1.2801.3702c-.3824.2365-.6882.572-.8826.9679a2.267 2.267 0 0 0-.2173 1.272c.0525.4352.2306.8475.514 1.1899v.01Z"
-                      fill="#D22856" />
+                  <svg class="button-catalog__like-icon">
+                    <use href="./img/sprite.svg#like"></use>
                   </svg>
                 </button>
                 <span class="button-catalog__like-text">Нравится: 215</span>
@@ -201,25 +225,30 @@
             </div>
           </li>
           <li class="catalog__item user-card">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="./img/photo/market-large.jpg 1x, ./img/photo/market-large@2x.jpg 2x">
-              <source media="(min-width: 660px)"
-                srcset="./img/photo/market-medium.jpg 1x, ./img/photo/market-medium@2x.jpg 2x">
-              <img class="user-card__photo" src="./img/photo/market-small.jpg"
-                srcset="./img/photo/market-small@2x.jpg 2x" width="280" height="180" alt="Кубанский рынок.">
-            </picture>
+            <a class="user-card__photo-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./img/photo/market-large.webp 1x, ./img/photo/market-large@2x.webp 2x">
+                <source media="(min-width: 1200px)"
+                  srcset="./img/photo/market-large.jpg 1x, ./img/photo/market-large@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="./img/photo/market-medium.webp 1x, ./img/photo/market-medium@2x.webp 2x">
+                <source media="(min-width: 660px)"
+                  srcset="./img/photo/market-medium.jpg 1x, ./img/photo/market-medium@2x.jpg 2x">
+                <source media="(min-width: 320px)"
+                  srcset="./img/photo/market-small.webp 1x, ./img/photo/market-small@2x.webp 2x">
+                <img class="user-card__photo" src="./img/photo/market-small.jpg"
+                  srcset="./img/photo/market-small@2x.jpg 2x" width="280" height="180" alt="Кубанский рынок.">
+              </picture>
+            </a>
             <div class="user-card__container">
               <p class="user-card__author">Сергей&nbsp;<span class="user-card__time">(25 часов назад)</span></p>
               <p class="user-card__description">Самая кубанская в мире!</p>
               <div class="user-card__like button-catalog">
                 <button class="button-catalog__like" type="button">
                   <span class="visually-hidden">Лайк!</span>
-                  <svg class="button-catalog__like-icon" width="13" height="12" viewbox="0 0 13 12" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M6.4687 12a.7823.7823 0 0 1-.3188-.0633.756.756 0 0 1-.2617-.1867C1.9592 7.42 1.0366 6.44.8604 6.17.3071 5.495.0042 4.6606 0 3.8c.0044-.7257.223-1.4353.6303-2.0455.4073-.6102.9864-1.0959 1.6694-1.4002A4.0902 4.0902 0 0 1 4.4872.0364C5.233.1331 5.9346.4326 6.5102.9 7.2276.3195 8.1341.001 9.0706 0c1.0429.0026 2.0422.4042 2.7787 1.1165.7365.7124 1.1501 1.6774 1.1501 2.6835.0145.8772-.315 1.7272-.9226 2.38l-5.038 5.56a.7567.7567 0 0 1-.257.1846.7806.7806 0 0 1-.3132.0654V12ZM2.0733 5.28c.2177.26 2.5605 2.84 4.3954 4.86L10.947 5.2c.3603-.382.5535-.8837.539-1.4 0-.618-.2544-1.2106-.7074-1.6476-.453-.437-1.0673-.6824-1.708-.6824a2.5947 2.5947 0 0 0-1.0966.2519 2.5026 2.5026 0 0 0-.873.6881.8162.8162 0 0 1-.2744.2038.8437.8437 0 0 1-.3372.0762.7575.7575 0 0 1-.3327-.0816.7286.7286 0 0 1-.2582-.2184 2.4309 2.4309 0 0 0-.8676-.682 2.521 2.521 0 0 0-1.0916-.238 2.4902 2.4902 0 0 0-1.2801.3702c-.3824.2365-.6882.572-.8826.9679a2.267 2.267 0 0 0-.2173 1.272c.0525.4352.2306.8475.514 1.1899v.01Z"
-                      fill="#D22856" />
+                  <svg class="button-catalog__like-icon">
+                    <use href="./img/sprite.svg#like"></use>
                   </svg>
                 </button>
                 <span class="button-catalog__like-text">Нравится: 4</span>
@@ -227,25 +256,30 @@
             </div>
           </li>
           <li class="catalog__item user-card">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="./img/photo/mount-large.jpg 1x, ./img/photo/mount-large@2x.jpg 2x">
-              <source media="(min-width: 660px)"
-                srcset="./img/photo/mount-medium.jpg 1x, ./img/photo/mount-medium@2x.jpg 2x">
-              <img class="user-card__photo" src="./img/photo/mount-small.jpg" srcset="./img/photo/mount-small@2x.jpg 2x"
-                width="280" height="180" alt="Ноги на фоне гор.">
-            </picture>
+            <a class="user-card__photo-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./img/photo/mount-large.webp 1x, ./img/photo/mount-large@2x.webp 2x">
+                <source media="(min-width: 1200px)"
+                  srcset="./img/photo/mount-large.jpg 1x, ./img/photo/mount-large@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="./img/photo/mount-medium.webp 1x, ./img/photo/mount-medium@2x.webp 2x">
+                <source media="(min-width: 660px)"
+                  srcset="./img/photo/mount-medium.jpg 1x, ./img/photo/mount-medium@2x.jpg 2x">
+                <source media="(min-width: 320px)"
+                  srcset="./img/photo/mount-small.webp 1x, ./img/photo/mount-small@2x.webp 2x">
+                <img class="user-card__photo" src="./img/photo/mount-small.jpg"
+                  srcset="./img/photo/mount-small@2x.jpg 2x" width="280" height="180" alt="Ноги на фоне гор.">
+              </picture>
+            </a>
             <div class="user-card__container">
               <p class="user-card__author">Максим&nbsp;<span class="user-card__time">(40 часов назад)</span></p>
               <p class="user-card__description">Где снег-то?</p>
               <div class="cuser-card__like button-catalog">
                 <button class="button-catalog__like" type="button">
                   <span class="visually-hidden">Лайк!</span>
-                  <svg class="button-catalog__like-icon" width="13" height="12" viewbox="0 0 13 12" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M6.4687 12a.7823.7823 0 0 1-.3188-.0633.756.756 0 0 1-.2617-.1867C1.9592 7.42 1.0366 6.44.8604 6.17.3071 5.495.0042 4.6606 0 3.8c.0044-.7257.223-1.4353.6303-2.0455.4073-.6102.9864-1.0959 1.6694-1.4002A4.0902 4.0902 0 0 1 4.4872.0364C5.233.1331 5.9346.4326 6.5102.9 7.2276.3195 8.1341.001 9.0706 0c1.0429.0026 2.0422.4042 2.7787 1.1165.7365.7124 1.1501 1.6774 1.1501 2.6835.0145.8772-.315 1.7272-.9226 2.38l-5.038 5.56a.7567.7567 0 0 1-.257.1846.7806.7806 0 0 1-.3132.0654V12ZM2.0733 5.28c.2177.26 2.5605 2.84 4.3954 4.86L10.947 5.2c.3603-.382.5535-.8837.539-1.4 0-.618-.2544-1.2106-.7074-1.6476-.453-.437-1.0673-.6824-1.708-.6824a2.5947 2.5947 0 0 0-1.0966.2519 2.5026 2.5026 0 0 0-.873.6881.8162.8162 0 0 1-.2744.2038.8437.8437 0 0 1-.3372.0762.7575.7575 0 0 1-.3327-.0816.7286.7286 0 0 1-.2582-.2184 2.4309 2.4309 0 0 0-.8676-.682 2.521 2.521 0 0 0-1.0916-.238 2.4902 2.4902 0 0 0-1.2801.3702c-.3824.2365-.6882.572-.8826.9679a2.267 2.267 0 0 0-.2173 1.272c.0525.4352.2306.8475.514 1.1899v.01Z"
-                      fill="#D22856" />
+                  <svg class="button-catalog__like-icon">
+                    <use href="./img/sprite.svg#like"></use>
                   </svg>
                 </button>
                 <span class="button-catalog__like-text">Нравится: 150</span>
@@ -253,14 +287,23 @@
             </div>
           </li>
           <li class="catalog__item user-card">
-            <picture>
-              <source media="(min-width: 1200px)"
-                srcset="./img/photo/airplane-large.jpg 1x, ./img/photo/airplane-large@2x.jpg 2x">
-              <source media="(min-width: 660px)"
-                srcset="./img/photo/airplane-medium.jpg 1x, ./img/photo/airplane-medium@2x.jpg 2x">
-              <img class="user-card__photo" src="./img/photo/airplane-small.jpg"
-                srcset="./img/photo/airplane-small@2x.jpg 2x" width="280" height="180" alt="Крыло самолета на закате.">
-            </picture>
+            <a class="user-card__photo-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./img/photo/airplane-large.webp 1x, ./img/photo/airplane-large@2x.webp 2x">
+                <source media="(min-width: 1200px)"
+                  srcset="./img/photo/airplane-large.jpg 1x, ./img/photo/airplane-large@2x.jpg 2x">
+                <source media="(min-width: 660px)"
+                  srcset="./img/photo/airplane-medium.webp 1x, ./img/photo/airplane-medium@2x.webp 2x">
+                <source media="(min-width: 660px)"
+                  srcset="./img/photo/airplane-medium.jpg 1x, ./img/photo/airplane-medium@2x.jpg 2x">
+                <source media="(min-width: 320px)"
+                  srcset="./img/photo/airplane-small.webp 1x, ./img/photo/airplane-small@2x.webp 2x">
+                <img class="user-card__photo" src="./img/photo/airplane-small.jpg"
+                  srcset="./img/photo/airplane-small@2x.jpg 2x" width="280" height="180"
+                  alt="Крыло самолета на закате.">
+              </picture>
+            </a>
             <div class="user-card__container">
               <p class="user-card__author">Надежда&nbsp;<span class="user-card__time">(45 часов назад)</span>
               </p>
@@ -268,11 +311,8 @@
               <div class="user-card__like button-catalog">
                 <button class="button-catalog__like" type="button">
                   <span class="visually-hidden">Лайк!</span>
-                  <svg class="button-catalog__like-icon" width="13" height="12" viewbox="0 0 13 12" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M6.4687 12a.7823.7823 0 0 1-.3188-.0633.756.756 0 0 1-.2617-.1867C1.9592 7.42 1.0366 6.44.8604 6.17.3071 5.495.0042 4.6606 0 3.8c.0044-.7257.223-1.4353.6303-2.0455.4073-.6102.9864-1.0959 1.6694-1.4002A4.0902 4.0902 0 0 1 4.4872.0364C5.233.1331 5.9346.4326 6.5102.9 7.2276.3195 8.1341.001 9.0706 0c1.0429.0026 2.0422.4042 2.7787 1.1165.7365.7124 1.1501 1.6774 1.1501 2.6835.0145.8772-.315 1.7272-.9226 2.38l-5.038 5.56a.7567.7567 0 0 1-.257.1846.7806.7806 0 0 1-.3132.0654V12ZM2.0733 5.28c.2177.26 2.5605 2.84 4.3954 4.86L10.947 5.2c.3603-.382.5535-.8837.539-1.4 0-.618-.2544-1.2106-.7074-1.6476-.453-.437-1.0673-.6824-1.708-.6824a2.5947 2.5947 0 0 0-1.0966.2519 2.5026 2.5026 0 0 0-.873.6881.8162.8162 0 0 1-.2744.2038.8437.8437 0 0 1-.3372.0762.7575.7575 0 0 1-.3327-.0816.7286.7286 0 0 1-.2582-.2184 2.4309 2.4309 0 0 0-.8676-.682 2.521 2.521 0 0 0-1.0916-.238 2.4902 2.4902 0 0 0-1.2801.3702c-.3824.2365-.6882.572-.8826.9679a2.267 2.267 0 0 0-.2173 1.272c.0525.4352.2306.8475.514 1.1899v.01Z"
-                      fill="#D22856" />
+                  <svg class="button-catalog__like-icon">
+                    <use href="./img/sprite.svg#like"></use>
                   </svg>
                 </button>
                 <span class="button-catalog__like-text">Нравится: 2560</span>
@@ -287,76 +327,87 @@
       </div>
     </section>
     <section class="upload">
-      <div class="upload__container">
-        <picture>
-          <source media="(min-width: 660px)"
-            srcset="./img/photo/snow-road-medium.jpg 1x, ./img/photo/snow-road-medium@2x.jpg 2x">
-          <img class="upload__image" src="./img/photo/snow-road-small.jpg"
-            srcset="./img/photo/snow-road-small@2x.jpg 2x" width="280" height="374" alt="Заснеженная дорога в лесу.">
-        </picture>
-        <div class="upload__all-editor">
-          <div class="upload__editor-container editor">
-            <div class="editor__buttons-container">
-              <div class="editor__button-container">
-                <button class="editor__button editor__button--active">
-                  <span class="visually-hidden">Изменить размер</span>
-                  <svg class="editor__button-icon editor__button-icon--active editor__button-icon--active-phone"
-                    width="44" height="44">
-                    <use href="./img/sprite.svg#edit-size"></use>
-                  </svg>
-                </button>
-                <div class="editor__slider-range editor__slider-range--disabled">
-                  <button class="editor__slider-range-toggle editor__slider-range-toggle--size">
-                    <span class="visually-hidden">Ползунок для редактора</span>
+      <h2 class="visually-hidden">Запостить изображение</h2>
+      <form class="upload__form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="upload__container">
+          <picture>
+            <source media="(min-width: 660px)"
+              srcset="./img/photo/snow-road-medium.webp 1x, ./img/photo/snow-road-medium@2x.webp 2x">
+            <source media="(min-width: 660px)"
+              srcset="./img/photo/snow-road-medium.jpg 1x, ./img/photo/snow-road-medium@2x.jpg 2x">
+            <source media="(min-width: 320px)"
+              srcset="./img/photo/snow-road-small.webp 1x, ./img/photo/snow-road-small@2x.webp 2x">
+            <img class="upload__image" src="./img/photo/snow-road-small.jpg"
+              srcset="./img/photo/snow-road-small@2x.jpg 2x" width="280" height="374" alt="Заснеженная дорога в лесу.">
+          </picture>
+          <div class="upload__all-editor">
+            <div class="upload__editor-container editor">
+              <div class="editor__buttons-container">
+                <div class="editor__button-container">
+                  <button class="editor__button editor__button--active" type="button">
+                    <span class="visually-hidden">Изменить размер</span>
+                    <svg class="editor__button-icon editor__button-icon--active editor__button-icon--active-phone"
+                      width="44" height="44">
+                      <use href="./img/sprite.svg#edit-size"></use>
+                    </svg>
                   </button>
+                  <div class="editor__slider-range editor__slider-range--disabled">
+                    <input class="visually-hidden" type="range" value="60" name="crop">
+                    <button class="editor__slider-range-toggle editor__slider-range-toggle--size" type="button">
+                      <span class="visually-hidden">Ползунок для редактора</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="editor__button-container">
+                  <button class="editor__button editor__button--active" type="button">
+                    <span class="visually-hidden">Изменить цвет</span>
+                    <svg class="editor__button-icon editor__button-icon--active" width="48" height="43">
+                      <use href="./img/sprite.svg#edit-color"></use>
+                    </svg>
+                  </button>
+                  <div class="editor__slider-range editor__slider-range--disabled">
+                    <input class="visually-hidden" type="range" value="10" name="fill">
+                    <button class="editor__slider-range-toggle editor__slider-range-toggle--color" type="button">
+                      <span class="visually-hidden">Ползунок для редактора</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="editor__button-container">
+                  <button class="editor__button editor__button--active" type="button">
+                    <span class="visually-hidden">Изменить контрастность</span>
+                    <svg class="editor__button-icon editor__button-icon--active" width="32" height="32">
+                      <use href="./img/sprite.svg#edit-contrast"></use>
+                    </svg>
+                  </button>
+                  <div class="editor__slider-range editor__slider-range--disabled">
+                    <input class="visually-hidden" type="range" value="40" name="contrast">
+                    <button class="editor__slider-range-toggle editor__slider-range-toggle--contrast" type="button">
+                      <span class="visually-hidden">Ползунок для редактора</span>
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div class="editor__button-container">
-                <button class="editor__button editor__button--active">
-                  <span class="visually-hidden">Изменить цвет</span>
-                  <svg class="editor__button-icon editor__button-icon--active" width="48" height="43">
-                    <use href="./img/sprite.svg#edit-color"></use>
-                  </svg>
-                </button>
-                <div class="editor__slider-range editor__slider-range--disabled">
-                  <button class="editor__slider-range-toggle editor__slider-range-toggle--color">
-                    <span class="visually-hidden">Ползунок для редактора</span>
-                  </button>
-                </div>
-              </div>
-              <div class="editor__button-container">
-                <button class="editor__button editor__button--active">
-                  <span class="visually-hidden">Изменить контрастность</span>
-                  <svg class="editor__button-icon editor__button-icon--active" width="32" height="32">
-                    <use href="./img/sprite.svg#edit-contrast"></use>
-                  </svg>
-                </button>
-                <div class="editor__slider-range editor__slider-range--disabled">
-                  <button class="editor__slider-range-toggle editor__slider-range-toggle--contrast">
+              <div class="editor__slider-container">
+                <div class="editor__slider-range editor__slider-range--active">
+                  <button class="editor__slider-range-toggle" type="button">
                     <span class="visually-hidden">Ползунок для редактора</span>
                   </button>
                 </div>
               </div>
             </div>
-            <div class="editor__slider-container">
-              <div class="editor__slider-range editor__slider-range-last--disabled">
-                <button class="editor__slider-range-toggle">
-                  <span class="visually-hidden">Ползунок для редактора</span>
-                </button>
-              </div>
+            <div class="upload__buttons-container">
+              <button class="upload__post button-secondary button-secondary--post" type="submit">Запостить</button>
+              <button class="upload__cancel button-secondary button-secondary--cancel" type="reset">Отмена</button>
             </div>
-          </div>
-          <div class="upload__buttons-container">
-            <button class="upload__post button-secondary button-secondary--post">Запостить</button>
-            <button class="upload__cancel button-secondary button-secondary--cancel">Отмена</button>
           </div>
         </div>
-      </div>
+      </form>
     </section>
   </main>
-  <footer class="main-footer">
+  <footer class="main-footer main-footer--position">
     <div class="main-footer__logo-container">
-      <a class="main-footer__link" href="#">
+      <a class="main-footer__link" href="./index.html">
+        <span class="visually-hidden">Логотип сайта</span>
         <svg class="main-footer__logo main-footer__logo--visible" width="59" height="40" viewbox="0 0 59 40" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"

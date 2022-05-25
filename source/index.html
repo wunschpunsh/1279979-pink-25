@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page nojs" lang="ru">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link rel="stylesheet" href="./css/style.min.css">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="./favicon.ico">
   <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.png">
-  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./img/favicons/apple-icon-180x180.webp">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="preload" href="./fonts/opensans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/opensanslight.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <script>document.documentElement.classList.remove('nojs')</script>
 </head>
 
 <body class="page__body">
   <header class="main-header main-header__background-image">
     <div class="main-header__container">
-      <nav class="main-nav main-nav--nojs">
+      <nav class="main-nav">
         <div class="main-nav__header-container">
           <a class="main-nav__logo" href="#">
+            <span class="visually-hidden">Логотип сайта</span>
             <svg class="main-nav__logo-image main-nav__logo-image--visible-phone" width="74" height="23"
               viewbox="0 0 74 23" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -58,7 +63,7 @@
         </div>
         <div class="main-nav__container">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active">
+            <li class="main-nav__item">
               <a class="main-nav__link ">Главная</a>
             </li>
             <li class="main-nav__item">
@@ -68,29 +73,37 @@
               <a class="main-nav__link" href="form.html">Конкурс</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#">html academy</a>
+              <a class="main-nav__link" href="#">HTML academy</a>
             </li>
           </ul>
         </div>
       </nav>
     </div>
     <div class="main-header__content">
-      <p class="main-header__slogan">Взгляните<br> на жизнь<br> иначе!</p>
+      <p class="main-header__slogan">Взгляните на жизнь иначе!</p>
       <picture>
+        <source media="(min-width:1200px)"
+          srcset="./img/iphone-screens/hand-with-phone-large.webp 1x, ./img/iphone-screens/hand-with-phone-large@2x.webp 2x">
         <source media="(min-width:1200px)"
           srcset="./img/iphone-screens/hand-with-phone-large.png 1x, ./img/iphone-screens/hand-with-phone-large@2x.png 2x">
         <source media="(min-width:660px)"
+          srcset="./img/iphone-screens/hand-with-phone-medium.webp 1x, ./img/iphone-screens/hand-with-phone-medium@2x.webp 2x">
+        <source media="(min-width:660px)"
           srcset="./img/iphone-screens/hand-with-phone-medium.png 1x, ./img/iphone-screens/hand-with-phone-medium@2x.png 2x">
+        <source media="(min-width:320px)"
+          srcset="./img/iphone-screens/hand-with-phone-small.webp 1x, ./img/iphone-screens/hand-with-phone-small@2x.webp 2x">
         <img class="main-header__image" src="./img/iphone-screens/hand-with-phone-small.png"
           srcset="./img/iphone-screens/hand-with-phone-small@2x.png 2x" width="320" height="286"
           alt="Рука с телефоном.">
       </picture>
       <div class="main-header__store store">
-        <button class="store__download button-secondary" type="button">Скачать приложение</button>
+        <a class="store__link-download" href="https://apps.apple.com">
+          <button class="store__download button-secondary" type="button">Скачать приложение</button>
+        </a>
         <div class="store__container">
           <ul class="store__list">
             <li class="store__item">
-              <a class="store__link" href="#">
+              <a class="store__link" href="https://apps.apple.com/us/story/id1361518086?itscg=10000&itsct=">
                 <svg class="store__link-apple">
                   <use href="./img/sprite.svg#apple-logo"></use>
                 </svg>
@@ -98,7 +111,8 @@
               </a>
             </li>
             <li class="store__item">
-              <a class="store__link" href="#">
+              <a class="store__link"
+                href="https://play.google.com/store/apps/details?id=com.netflix.mediaclient&hl=ru&gl=US">
                 <svg class="store__link-android">
                   <use href="./img/sprite.svg#android-logo"></use>
                 </svg>
@@ -106,7 +120,8 @@
               </a>
             </li>
             <li class="store__item">
-              <a class="store__link" href="#">
+              <a class="store__link"
+                href="https://apps.microsoft.com/store/detail/discord/XPDC2RH70K22MN?hl=ru-ru&gl=ru">
                 <svg class="store__link-microsoft">
                   <use href="./img/sprite.svg#microsoft-logo"></use>
                 </svg>
@@ -132,40 +147,56 @@
         <ul class="advantages__list">
           <li class="advantages__item">
             <div class="advantages__item-image-container">
-              <img class="advantages__item-image" src="./img/iphone-screens/photo-screen-grey-garbage-medium.png"
-                srcset="./img/iphone-screens/photo-screen-grey-garbage-medium@2x.png 2x" width="186" height="382"
-                alt="скриншот серой мусорки">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./img/iphone-screens/photo-screen-grey-garbage-medium.webp 1x, ./img/iphone-screens/photo-screen-grey-garbage-medium@2x.webp 2x">
+                <img class="advantages__item-image" src="./img/iphone-screens/photo-screen-grey-garbage-medium.png"
+                  srcset="./img/iphone-screens/photo-screen-grey-garbage-medium@2x.png 2x" width="186" height="382"
+                  alt="скриншот серой мусорки">
+              </picture>
             </div>
             <h3 class="advantages__title">Поднимает настроение</h3>
-            <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию<br> буквально
+            <p class="advantages__description">Приложение позволит вам победить осеннюю хандру<br> и депрессию буквально
               в
               несколько кликов!</p>
           </li>
           <li class="advantages__item">
             <div class="advantages__item-image-container">
-              <img class="advantages__item-image" src="./img/iphone-screens/photo-screen-pink-garbage-medium.png"
-                srcset="./img/iphone-screens/photo-screen-pink-garbage-medium@2x.png 2x" width="186" height="382"
-                alt="скриншот розовой мусорки">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./img/iphone-screens/photo-screen-pink-garbage-medium.webp 1x, ./img/iphone-screens/photo-screen-pink-garbage-medium@2x.webp 2x">
+                <img class="advantages__item-image" src="./img/iphone-screens/photo-screen-pink-garbage-medium.png"
+                  srcset="./img/iphone-screens/photo-screen-pink-garbage-medium@2x.png 2x" width="186" height="382"
+                  alt="скриншот розовой мусорки">
+              </picture>
             </div>
-            <h3 class="advantages__title">Меняет мир<br> вокруг</h3>
-            <p class="advantages__description">Сделайте снимок и украсьте его<br> смайликом или текстовой подписью,<br>
+            <h3 class="advantages__title">Меняет мир<br>&nbsp;вокруг</h3>
+            <p class="advantages__description">Сделайте снимок и <br>украсьте его смайликом<br> или текстовой
+              подписью,<br>
               чтобы
-              усилить эффект</p>
+              усилить&nbsp;эффект</p>
           </li>
           <li class="advantages__item">
             <div class="advantages__item-image-container">
               <picture>
                 <source media="(min-width: 1200px)"
+                  srcset="./img/iphone-screens/photo-screen-hello-medium.webp 1x, ./img/iphone-screens/photo-screen-hello-medium@2x.webp 2x">
+                <source media="(min-width: 1200px)"
                   srcset="./img/iphone-screens/photo-screen-hello-medium.png 1x, ./img/iphone-screens/photo-screen-hello-medium@2x.png 2x">
                 <source media="(min-width: 660px)"
+                  srcset="./img/iphone-screens/photo-screen-hello-large.webp 1x, ./img/iphone-screens/photo-screen-hello-large@2x.webp 2x">
+                <source media="(min-width: 660px)"
                   srcset="./img/iphone-screens/photo-screen-hello-large.png 1x, ./img/iphone-screens/photo-screen-hello-large@2x.png 2x">
+                <source media="(min-width: 320px)"
+                  srcset="./img/iphone-screens/photo-screen-hello-small.webp 1x, ./img/iphone-screens/photo-screen-hello-small@2x.webp 2x">
                 <img class="advantages__item-image" src="./img/iphone-screens/photo-screen-hello-small.png"
                   srcset="./img/iphone-screens/photo-screen-hello-small@2x.png 2x" width="157" height="320"
-                  alt="скриншот розовой мусорки">
+                  alt="скриншот розовой мусорки, приветствие">
               </picture>
             </div>
-            <h3 class="advantages__title">Заводит<br> новых друзей</h3>
-            <p class="advantages__description">Ставьте лайки, комментируйте,<br> делитесь фотографиями с друзьями и
+            <h3 class="advantages__title">Заводит<br>&nbsp;новых друзей</h3>
+            <p class="advantages__description">Ставьте лайки,<br> комментируйте, делитесь фотографиями с друзьями<br>
+              и
               заводите
               новых</p>
           </li>
@@ -175,8 +206,8 @@
     <section class="note">
       <div class="note__container">
         <h2 class="note__title">Эффект<br> на 24 часа!</h2>
-        <p class="note__description">Британские ученые провели исследования<br> и доказали,
-          что положительный эффект<br> от использования приложения длится целые сутки!</p>
+        <p class="note__description">Британские ученые провели исследования и&nbsp;доказали,
+          что&nbsp;положительный эффект<br> от использования приложения длится целые сутки!</p>
         <a class="note__info" href="#">Узнать больше об исследовании</a>
       </div>
     </section>
@@ -212,19 +243,19 @@
           </blockquote>
           <blockquote class="reviews__item slider__item visually-hidden">
             <div class="reviews__author-info">
-              <cite class="reviews__author-name">Николай Петров</cite>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на
-                привычные
-                серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              <cite class="reviews__author-name">Паша Техник</cite>
+              <span class="reviews__author-resume">30 лет, телезвезда</span>
             </div>
+            <p class="reviews__text">«Крутое приложение, спасибо. Но есть одинк вопрос: почему пропала функция
+              прозрачности текста? Всегда ей пользовалась, а теперь не могу»</p>
           </blockquote>
           <blockquote class="reviews__item slider__item visually-hidden">
             <div class="reviews__author-info">
-              <cite class="reviews__author-name">Николай Петров</cite>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на
-                привычные
-                серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+              <cite class="reviews__author-name">Петр Николаев</cite>
+              <span class="reviews__author-resume">30 лет, бездельник</span>
             </div>
+            <p class="reviews__text">«Не могу утверждать, но мне кажется, что функционала стало меньше. Раньше работал
+              с этим приложением в телефоне IPhone, а теперь перешёл на Samsung. Может есть планая версия?»</p>
           </blockquote>
         </div>
         <p class="reviews__toggles slider__toggles">
@@ -254,10 +285,6 @@
           <tr class="tariff-plan__advantage">
             <td class="tariff-plan__advantage-title">
               Розовый фильтр
-              <span class="visually-hidden">Да</span>
-              <svg class="tariff-plan__advantage-title-yes tariff-plan__advantage-title--disabled-icon">
-                <use href="./img/sprite.svg#yes"></use>
-              </svg>
             </td>
             <td class="tariff-plan__advantage-title tariff-plan__advantage-title--disabled">
               Розовый фильтр
@@ -284,24 +311,6 @@
           <tr class="tariff-plan__advantage">
             <td class="tariff-plan__advantage-title">
               Смайлики
-              <span class="visually-hidden">Нет</span>
-              <svg class="tariff-plan__advantage-title-no tariff-plan__advantage-title--disabled-icon">
-                <use href="./img/sprite.svg#no"></use>
-              </svg>
-            </td>
-            <td class="tariff-plan__advantage-title tariff-plan__advantage-title--disabled">
-              Смайлики
-              <span class="visually-hidden">Да</span>
-              <svg class="tariff-plan__advantage-title-yes">
-                <use href="./img/sprite.svg#yes"></use>
-              </svg>
-            </td>
-            <td class="tariff-plan__advantage-title tariff-plan__advantage-title--disabled">
-              Смайлики
-              <span class="visually-hidden">Да</span>
-              <svg class="tariff-plan__advantage-title-yes">
-                <use href="./img/sprite.svg#yes"></use>
-              </svg>
             </td>
             <td class="tariff-plan__advantage-title tariff-plan__advantage-title--disabled">
               Смайлики
@@ -310,14 +319,24 @@
                 <use href="./img/sprite.svg#no"></use>
               </svg>
             </td>
+            <td class="tariff-plan__advantage-title tariff-plan__advantage-title--disabled">
+              Смайлики
+              <span class="visually-hidden">Да</span>
+              <svg class="tariff-plan__advantage-title-yes">
+                <use href="./img/sprite.svg#yes"></use>
+              </svg>
+            </td>
+            <td class="tariff-plan__advantage-title tariff-plan__advantage-title--disabled">
+              Смайлики
+              <span class="visually-hidden">Да</span>
+              <svg class="tariff-plan__advantage-title-yes">
+                <use href="./img/sprite.svg#yes"></use>
+              </svg>
+            </td>
           </tr>
           <tr class="tariff-plan__advantage">
             <td class="tariff-plan__advantage-title">
               Комментарии
-              <span class="visually-hidden">Нет</span>
-              <svg class="tariff-plan__advantage-title-no tariff-plan__advantage-title--disabled-icon">
-                <use href="./img/sprite.svg#no"></use>
-              </svg>
             </td>
             <td class="tariff-plan__advantage-title tariff-plan__advantage-title--disabled">
               Комментарии
@@ -369,10 +388,9 @@
           </li>
         </ul>
         <div class="contacts__map">
-          <iframe
+          <iframe class="contacts__map-google contacts__map-google--nojs" title="Адрес академии"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8224465563626!2d30.31522021617442!3d59.96826866667002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1650919933333!5m2!1sru!2sru"
-            width="100%" height="100%" style="border: 0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
+            style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
       </div>
@@ -380,7 +398,8 @@
   </main>
   <footer class="main-footer">
     <div class="main-footer__logo-container">
-      <a class="main-footer__link" href="#">
+      <a class="main-footer__link" href="./index.html">
+        <span class="visually-hidden">Логотип сайта</span>
         <svg class="main-footer__logo main-footer__logo--visible" width="59" height="40" viewbox="0 0 59 40" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
