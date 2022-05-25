@@ -78,7 +78,6 @@
 
   @media (min-width: $desktop-width) {
     padding: 30px 30px 27px 27px;
-    // padding-right: 30px;
   }
 
   &--hit {
@@ -178,8 +177,6 @@
   }
 
   &--hit {
-    // margin-bottom: 9px;
-
     @media (min-width: $tablet-width) {
       margin-bottom: 0;
       order: 3;

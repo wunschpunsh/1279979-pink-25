@@ -15,7 +15,6 @@
   @media (min-width: $desktop-width) {
     display: flex;
     background-color: transparent;
-    // justify-content: space-around;
   }
 }
 
@@ -23,7 +22,6 @@
   display: flex;
   justify-content: space-between;
   padding: 21px 20px;
-  // box-shadow: 0 1px 0 #000000;
 
   @media (min-width: $tablet-width) {
     padding: 27px 20px 42px;
@@ -31,7 +29,6 @@
 
   @media (min-width: $desktop-width) {
     display: flex;
-    // justify-content: space-between;
     padding: 27px 0 43px;
     margin-right: 173px;
   }
@@ -218,7 +215,6 @@
     width: 620px;
     display: flex;
     flex-wrap: wrap;
-    // justify-content: space-around;
     align-items: center;
     padding-top: 45px;
   }
