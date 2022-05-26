@@ -34,21 +34,27 @@
   }
 }
 
-.main-footer__link {
+.main-footer__logo-link {
   text-decoration: none;
 
-  &:active .main-footer__logo,
-  &:active .main-footer__logo--decore {
+  &:active .main-footer__logo-icon,
+  &:active .main-footer__logo-icon--decore {
     opacity: 0.3;
   }
 
-  &:hover .main-footer__logo--decore path {
+  &:hover .main-footer__logo-icon--decore path {
     fill: $red;
   }
 }
 
-.main-footer__logo {
+.main-footer__logo-wrapper {
   margin-right: 8px;
+}
+
+.main-footer__logo-icon {
+  &--position {
+    margin-right: 8px;
+  }
 
   &--visible {
     @media (min-width: $desktop-width) {
@@ -64,3 +70,4 @@
     }
   }
 }
+
