@@ -87,7 +87,9 @@
   line-height: 30px;
   text-transform: uppercase;
   text-align: center;
+}
 
+.main-form__required-asterisk {
   &--decore {
     color: $red;
   }

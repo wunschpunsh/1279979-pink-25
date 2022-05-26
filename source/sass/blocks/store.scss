@@ -47,12 +47,14 @@
 }
 
 .store__download {
+  display: block;
+  box-sizing: border-box;
   color: $white;
   border: 3px solid $white;
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
-  letter-spacing: 1px;
+  text-align: center;
 
   &:hover {
     background-color: $white;
@@ -72,7 +74,7 @@
   @media (min-width: $desktop-width) {
     font-size: 21px;
     margin-bottom: 66px;
-    padding: 16px 29px;
+    padding: 16px;
   }
 }
 

@@ -23,6 +23,14 @@
   margin-bottom: 44px;
   text-align: center;
 
+  &--decore {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $red;
+  }
+
   @media (min-width: $tablet-width) {
     br {
       display: none;

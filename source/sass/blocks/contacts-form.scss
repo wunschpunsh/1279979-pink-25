@@ -33,6 +33,14 @@
 }
 
 .contacts-form__title {
+  &--decore {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: $red;
+  }
+
   @media (min-width: $tablet-width) {
     display: block;
     margin: 0;
